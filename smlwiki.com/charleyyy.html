@@ -1,0 +1,23 @@
+<!DOCTYPE html> 
+<!-- Mirrored from smlwiki.com/charleyyy by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 04 May 2025 13:46:22 GMT -->
+<head> <link rel="icon" type="image/x-icon" href="favicon.ico"> <meta charset="UTF-8"> <meta name="robots" content="noindex"> <title>Meet Charleyyy! - smlwiki.com</title> </head> <html lang="en"> <style> button { cursor: none; } html { cursor: none; } 
+body { margin: 0; overflow: hidden; cursor: none; background-color: black; } #cursor { image-rendering: pixelated; position: absolute; width: 11.8px; height: 18.5px; background: url('cursor_a.png') center/cover no-repeat; z-index: 101; } *{image-rendering: pixelated;}
+#bg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle, rgb(246, 180, 211) 20%, rgba(255, 128, 191, 1) 50%, rgb(255, 123, 189) 100%); z-index: -1; }
+#anchor { position: absolute; width: 150px; height: 50px; background-color: blue; position: absolute; top: 666px; left: 50%; transform: translate(-50%, -50%); animation: textAnimation 500ms steps(4) infinite; }
+@keyframes textAnimation { 0% { font-size: 16px; color: red; rotate: -3deg; } 50% { font-size: 26px; color: yellow; rotate: 3deg; } 100% { font-size: 16px; color: green; rotate: -3deg; } }
+#charcontainer { position: absolute; top: 180px; left: 50%; transform: translateX(-50%); z-index: 8;  animation: imageContainerDefault 899ms infinite steps(1); z-index: 14 } .charleyyymove { animation: imageContainerAnimation 312ms infinite steps(2) !important;  }
+@keyframes imageContainerAnimation { 0% { transform: translateX(-50%) scale(1.7); } 55% { transform: translateX(-50%) scale(1.6); } 60% { transform: translateX(-50%) scale(1); } 80% { transform: translateX(-50%) scale(1.2); } 100% { transform: translateX(-50%) scale(1.4); } }
+@keyframes imageContainerDefault { 0% { transform: translateX(-50%) rotate(3deg); } 50% { transform: translateX(-50%) rotate(-3deg); } 100% { transform: translateX(-50%) rotate(0deg); } }
+#overlay { position: absolute; top: 0; left: 0; width: 100vw; height: 100vh; z-index: 9; pointer-events: none; }
+#chartext { font-family: 'Arial'; font-weight: bold; position: absolute; top: 716px; left: 50%; transform: translateX(-50%); font-size: 16px; color: red; }
+</style> <body> <div id="cursor"></div> <div id="bg"></div> <div id="overlay"></div> <div id="header-container"></div>
+<div id="charcontainer"> <div id="charimage" src="charleyyy.png" width="310"> </div> </div>
+<button id="anchor">Click me!</button> <div id="chartext">^^^ Click here to meet Charleyyy! ^^^</div>
+ <link rel="preload" href="charleyyy_sheet.gif" as="image"> </body> 
+<!-- Mirrored from smlwiki.com/charleyyy by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 04 May 2025 13:46:22 GMT -->
+</html>
+<footer><img id="logan30acre" src="cast/we.jpg"><style>#logan30acre{position: absolute; left:0; top:-128px; z-index: 100;width: 100%; animation: loganstank 3600ms linear; display: none;}@keyframes loganstank { 0% { top: -128px; opacity: 0; } 10% { top: -139px; opacity: 1; } 100% { top: -300px; opacity: 1; } }</style><script>const dirtyacre = new Audio('https://nez.fyi/sml-assets/30acre12.ogg'); function acre() { const image = document.getElementById('logan30acre'); image.style.display = 'block'; dirtyacre.play(); document.body.style.overflow = 'hidden'; document.body.style.margin = '0'; document.body.style.pointerEvents = 'none'; } </script></footer>
+
+<script> if (localStorage.getItem('firstvisit') !== 'false') { window.location.href = 'menu/index.html'; } </script>
+<script> const oldjumpscares = localStorage.getItem("jumpscareconsent"); const scriptf = oldjumpscares === 'true' ? 'ojs-charljon2.js' : 'ojs-charljoff.js'; fetch(scriptf) .then(response => response.text()) .then(jblock => { const jsbl = document.createElement('script'); jsbl.textContent = jblock; document.body.appendChild(jsbl); }) .catch(error => console.error('error fetching script:', error)); window.addEventListener('beforeunload', () => localStorage.setItem('charlvis', 'true')); </script>
+<script> fetch('global/header.html') .then(response => response.text()) .then(html => { html += '<style>body { cursor: none !important; }</style>'; document.getElementById('header-container').innerHTML = html;  ; return fetch('global/global.js').then(response => response.text()).then(script => eval(script)).catch(error => console.error('error fetching global js:', error));}) .catch(error => console.error('error fetching header:', error)); </script>

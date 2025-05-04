@@ -1,0 +1,92 @@
+<!DOCTYPE html> 
+<!-- Mirrored from smlwiki.com/titotube/aprilfools/alan.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 04 May 2025 13:47:00 GMT -->
+<meta name="robots" content="noindex"> <title>titotube poop #2</title> <style> #raafg { background: #000; width: 100%; height: 100vh; z-index: 99; position: absolute; text-align: center; color: #4ff; line-height: 12vh; } </style> <div id="raafg">
+<br>image 1: <input type="file" id="imageInput">
+<br>sound 1: <input type="file" id="soundInput1">
+<br>sound 2: <input type="file" id="soundInput2">
+<span style="display: none;"><br>text string: <input type="text" id="textInput"></span>
+<br><button onclick="start();">ok lets go</button> </div> <script> var sfx = new Audio(); var sfxB = new Audio();
+document.getElementById('imageInput').addEventListener('change', function() { var file = this.files[0]; var reader = new FileReader();
+ reader.onload = function(e) { document.body.style.backgroundImage = 'url(' + e.target.result + ')'; }
+ reader.readAsDataURL(file); });
+document.getElementById('soundInput1').addEventListener('change', function() {
+var file = this.files[0]; var reader = new FileReader(); reader.onload = function(e) { sfx.src = e.target.result; }
+ reader.readAsDataURL(file); });
+document.getElementById('soundInput2').addEventListener('change', function() {
+var file = this.files[0]; var reader = new FileReader(); reader.onload = function(e) { sfxB.src = e.target.result; }
+ reader.readAsDataURL(file); });
+document.getElementById('textInput').addEventListener('input', function() {
+var text = this.value; document.getElementById('text').innerText = text; });
+</script> <style> body { margin: 0; overflow: hidden; transition: unset; transform-origin: center middle; background-image: url('LAD.jpg'); } 
+#video-container video { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); box-shadow: 0 2px 22px; width: 100%; scale: 1.1; }
+#video-container { transform-style: preserve-3d; perspective: 70px; } #text { z-index: 5; position: fixed; top: calc(50% + 256px); left: calc(50% + 360px); transform: translate(-50%, -50%); font-size: 23px; color: #fff; font-family: Arial; font-weight: 900; text-transform: uppercase; background-color: #000; padding: 13px; width: 86%; padding-inline: 50%; display: none; }
+@keyframes juggle { 0% { transform: translate(50%, 50%); } 10% { transform: translate(50%, -50%); } }
+@keyframes zooma { 0% { transform: translate(-50%, -50%) scale(1); } 90% { transform: translate(-50%, -50%) scale(2); } }
+@keyframes shake { 0% { transform: translate(-51%, -49%); rotate: 0.5deg; } 10% { transform: translate(-49%, -52%); rotate: -0.5deg; } }
+@keyframes news { 0% { top: calc(50% + 256px); left: calc(-55% + 360px); transform: translate(-10%, -50%); } 100% { top: calc(50% + 256px); left: calc(50% + 360px); transform: translate(10%, -50%); } }
+</style> <html> <div id="video-container"> <span id="text"></span> <video src="medium.mp4" id="video"></video> </div>
+<video src="homerb.mp4" preload="auto" style="display: none;"></video><video src="arabcatsdancing.webm" preload="auto" style="display: none;"></video><video src="arabcatsdancing.webm" preload="auto" style="display: none;"></video>
+
+<!-- Mirrored from smlwiki.com/titotube/aprilfools/alan.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 04 May 2025 13:47:01 GMT -->
+</html> <script>// if (window === window.top) { window.location.href = '/'; }
+ function start() { const builder = document.getElementById('raafg'); builder.style.display = 'none'; const body = document.body; const video = document.getElementById('video'); const videoContainer = document.getElementById('video-container'); video.play(); video.autoplay = true;
+const keyframes = [
+{ time: 0, filter: 'saturate(4)', right: '0px', animation: 'news 1295ms linear' },
+{ time: 0.16, filter: 'none', animation: 'news 1295ms linear' },
+
+];
+function applyKeyframe(keyframe) { video.style.filter = keyframe.filter;
+if (keyframe.animation) {video.style.animation = keyframe.animation;} else { video.style.animation = 'none'; } }
+function updateVideo() { const currentTime = video.currentTime;
+let currentKeyframe = keyframes[0]; for (let i = 1; i < keyframes.length; i++) {
+if (keyframes[i].time > currentTime) { break; } currentKeyframe = keyframes[i]; }
+applyKeyframe(currentKeyframe); } video.addEventListener('timeupdate', updateVideo);
+function applyZoomKeyframe(scale, translateX, translateY, rotation) { body.style.transition;
+body.style.transform = `scale(${scale}) translate(${translateX}%, ${translateY}%) rotate(${rotation}deg)`;
+} const zoomKeyframes = [
+{ time: 0.00, scale: 1, translateX: -50, translateY: -50, rotation: 0, transition: 'transform 0' },
+{ time: 0.7, scale: 0.2, translateX: -130, translateY: 146, rotation: 0, transition: 'transform 1ms linear' },
+];
+setTimeout(function() { sfx.play(); }, 3750);
+function updateZoom() { const currentTime = video.currentTime;
+let currentKeyframe = zoomKeyframes[0]; for (let i = 1; i < zoomKeyframes.length; i++) {
+if (zoomKeyframes[i].time > currentTime) { break; } currentKeyframe = zoomKeyframes[i]; }
+applyZoomKeyframe(currentKeyframe.scale, currentKeyframe.translateX, currentKeyframe.translateY, currentKeyframe.rotation); body.style.transition = currentKeyframe.transition; }
+video.addEventListener('timeupdate', updateZoom);
+
+setTimeout(function() { const videoContainer = document.getElementById('video-container');
+const video = document.getElementById('video'); videoContainer.removeChild(video);
+const secondsource = document.createElement('video'); secondsource.src = "homerb.mp4"; secondsource.autoplay = true; secondsource.id = "video2"; sfx.pause();
+videoContainer.appendChild(secondsource); 
+setTimeout(function() { setInterval(function() {
+const maxDuration = secondsource.duration;
+const randomTime = Math.random() * maxDuration; const randomSpeed = Math.random() * 1.5 + 0.5;
+secondsource.playbackRate = randomSpeed;  secondsource.currentTime = randomTime;
+}, 150); var text = document.getElementById("text"); text.style.display = "block"; text.style.animation = "news 10ms linear"; setTimeout(function() { text.style.display = "none"; }, 10);
+
+setTimeout(function() { const shot = new Audio('54233__kaponja__guitar-cromatic-3.ogg'); shot.play();
+setTimeout(function() { sfx.play(); }, 400); }, 100); }, 200); }, 
+1200); 
+
+setTimeout(function() { const secondsource = document.createElement('video'); const videoContainer = document.getElementById('video-container'); const thirdsource = document.createElement('video');
+thirdsource.src = "video0.mp4"; thirdsource.autoplay = true; thirdsource.id = "video3";  secondsource.remove();
+videoContainer.appendChild(thirdsource); 
+setTimeout(function() { setInterval(function() {
+const maxDuration = thirdsource.duration; const randomTime = Math.random() * thirdsource.duration;
+const randomSpeed = Math.random() * 0.3 + 0.1; thirdsource.playbackRate = randomSpeed; thirdsource.currentTime = randomTime;
+}, 10); 
+setTimeout(function() { setInterval(function() { const randomRotation = Math.random() * -20; const randomRotation2 = Math.random() * 30;
+thirdsource.style.perspective = `4px`; thirdsource.style.transform = `rotateZ(${randomRotation * 3}deg) rotateX(3deg) scale(${randomRotation2 / 12})`;
+}, 89); }, 300); }, 20); }, 
+1200); 
+
+setTimeout(function() { const videoContainer = document.getElementById('video-container'); videoContainer.innerHTML = ''; sfxB.pause();
+const fourthsource = document.createElement('video'); fourthsource.src = "arabcatsdancing.webm";  fourthsource.autoplay = true; fourthsource.id = "video4";
+body.style.transform = `scaleX(1) scaleY(1.1) translateY(206px) rotate(0deg)`;
+videoContainer.appendChild(fourthsource); fourthsource.currentTime = 5.5;
+sfxB.play();
+fourthsource.playbackRate = 0.09; setTimeout(function() { fourthsource.playbackRate = 0.0;
+}, 2500); }, 4230);
+
+setTimeout(function() { window.parent.location.href = "../index-2.html"; }, 7000);
+};</script>

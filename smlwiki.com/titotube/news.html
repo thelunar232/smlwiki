@@ -1,0 +1,14 @@
+<!DOCTYPE html> <style> body { margin: 0; background: darkgray; } #l1top { position: absolute; height: 90px; display: flex; flex-direction: row; top: 94px; left: 0; width: 100vw; } 
+#l1mid { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+</style>
+<div id="header-container"></div>
+<div style=" font-family: Comic Sans MS; font-size: 19px; line-height: 1; letter-spacing: normal;">
+<div id="l1top"> <a href="index.html"><img src="logo226.jpg" height="90"></a> 'Exploe titotube" </div>
+
+<div id="l1mid">
+<iframe src="aprilfools/tito.html" width="890" height="510"></iframe><br>
+BREAKING NEWS!!!
+</div>
+</div>
+
+<script> fetch('../global/header.html') .then(response => response.text()) .then(html => { document.getElementById('header-container').innerHTML = html; }) .catch(error => console.error('error fetching header:', error)); </script>

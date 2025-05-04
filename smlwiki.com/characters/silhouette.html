@@ -1,0 +1,40 @@
+<!DOCTYPE html> 
+<!-- Mirrored from smlwiki.com/characters/silhouette by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 04 May 2025 13:44:57 GMT -->
+<head> <link rel="icon" type="image/x-icon" href="../favicon.ico"> <meta charset="UTF-8"> <meta name="robots" content="noindex"> <title>Silhouette - smlwiki.com</title> <meta name="description" content="'Silhouette' is a creature/entity of mysterious origin. It seems to have been human at some point, but is not anymore. It's known to stalk those who tread…"/> </head> 
+<html lang="en"><link rel="stylesheet" type="text/css" href="character_pages.css"> <style> #authorsign { position: absolute; bottom: 3px; right: 3px; font-size: 13px; font-weight: bold; font-style: italic; color: #756a; font-family: Consolas; text-align: right; } #authorsign:hover { color: #765; } </style>
+<style> .gallery { white-space: nowrap; width: 128px; height: 128px; display: inline-block; } .gallery img { margin-right: 23px; border: solid 1px; width: 198px; height: 256px; } </style>
+<div id="header-container"></div>
+  <div id="container"><div id="text-content">
+    <h1 style="padding-bottom: 42px; border-bottom: solid 1px #500;">Silhouette</h1>
+        <div class="text-entry">
+                <h2>Description</h2>
+                <p>'Silhouette' is a creature/entity of mysterious origin. It seems to have been human at some point, but is not anymore. It's known to stalk those who tread near the grounds of <a href="../game/house.html">the old house</a>. It makes a barely audible creaking sound wherever it goes.</p>
+            </div>
+        <div class="text-entry">
+                <h2>Behavior</h2>
+                <p>The entity tends to stay close to dark corners, or small spaces that have walls or other obstacles blocking any proper view of what's in front of or behind you at any given moment. For this reason, you're more likely to encounter it indoors, rather than outdoors. Those who have encountered this being have reportedly become 'cursed' in one way or another. The terrestrial limits of what this entity is capable of are undetermined.</p>
+            </div>
+        <div class="text-entry">
+                <h2>Other Information</h2>
+                <p>At this time, information on Silhouette is scarce and not easily obtainable. What is known is the fact that the entity is hostile and highly territorial. If you ever see its face, it would be in your best interest to escape into an open outdoor area with no walls. This is, however, known to not always work.<br><br>Some claim <a href="../cast/lance.html">Lance</a> got his powers through a connection to Silhouette, whenever the entity manifested, or later, through some spiritual/supernatural event, or even a curse. Though this makes logical sense, it is only speculation.</p>
+            </div>
+        <div class="text-entry">
+                <h2>Gallery</h2>
+            <div class="gallery"><img src="witness%20sketch%20of%20the%20sighting.png" title="witness sketch"></div></div>        
+    <span id="authorsign">Page submitted by 'Anonymous', 'Sepharium', & 'deathofserenity <span style="color: #446">[Admin]</span>'</span>
+                        </div>
+<div id="image-frame"> <div class="textbox">Appearance:</div> <div class="appearance-buttons">
+<button style="width: 100%;" onclick="changeAppearance('photo1')">Photo 1</button>
+<button style="width: 100%;" onclick="changeAppearance('photo2')">Photo 2</button></div>
+<div id="image-container"> <img id="entity-image" src="user-submissions/jimmy.jpg"> </div> <div class="infobox" id="description">Clearest photo of the entity - (Digitally brightened and reconstructed.)</div>
+</div> </div>
+<script> const audio = new Audio('https://nez.fyi/sml-assets/crackling.ogg'); audio.loop = true; audio.play(); localStorage.setItem("seenjimmy", "true");
+function changeAppearance(appearance) { const buttons = document.querySelectorAll('.appearance-buttons button'); buttons.forEach(btn => btn.classList.remove('pressed'));
+const image = document.querySelector('#entity-image'); const description = document.querySelector('#description');
+ if (appearance === 'photo1') {  image.src = 'user-submissions/jimmy.jpg';
+  description.textContent = "Clearest photo of the entity - (Digitally brightened and reconstructed.)";
+} else if (appearance === 'photo2') { image.src = 'user-submissions/9191025.jpg';
+ description.textContent = "A portrait. (by Sepharium)";
+} } </script>
+
+<script>fetch("../global/header.html").then(e=>e.text()).then(html=>(document.getElementById("header-container").innerHTML=html,fetch("../global/global.js").then(e=>e.text()).then(script=>eval(script)).catch(e=>console.error("error fetching global js:",e)))).catch(e=>console.error("error fetching header:",e));</script>

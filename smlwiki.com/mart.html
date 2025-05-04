@@ -1,0 +1,65 @@
+<!DOCTYPE html> 
+<!-- Mirrored from smlwiki.com/mart.php by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 04 May 2025 13:45:48 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<meta name="robots" content="noindex"> <link rel="icon" type="image/png" href="favicon.ico"> <title>Store (Jerry's CrapShack) - smlwiki.com</title> <script> fetch('global/header.html') .then(response => response.text()) .then(html => { document.getElementById('header-container').innerHTML = html; document.querySelectorAll('.cat')[5].id = 'currentcat' }) .catch(error => console.error('error fetching header:', error));</script>  <html lang="en"> <meta charset="UTF-8"> <style>
+body { margin: 0; padding: 0; cursor: url('cursor.png'), auto; overflow: hidden; } #frame { background-image:url('storepix/nshack.webp'); width: 1024px; height: 802px; overflow: visible; position: absolute; left: 50%; bottom: 44%; transform: translate(-50%, 50%); justify-content: space-between; display: flex; flex-direction: column; } .clickable {cursor: url('cursorclick.png'), auto}
+.item { width: 160px; height: 128px; position: absolute; top: 0; left: 0; perspective: 256px; } @font-face { font-family: 'danielbd'; src: url('irida/danielbd.html') format('truetype'); }
+.floating { position: absolute; pointer-events: none; user-select: none; } #jer { transform-origin: bottom; animation: jerrot 1024ms cubic-bezier(.49,.01,.6,.94) infinite }
+@keyframes jerrot{0%{rotate:2deg;transform:translateY(0);filter:drop-shadow(6px 9px 3px #4303)}50%{rotate:-3deg;transform:translateY(-1px);filter:drop-shadow(1px 11px 3px #4303)}100%{rotate:2deg;filter:drop-shadow(6px 9px 3px #4303)}}
+bg1 { image-rendering: pixelated; position: absolute; bottom: 403px; left: 50%; transform: translate(-50%); user-select: none; }
+bg2 { position: absolute; width: 100vw; left: 50%; transform: translate(-50%); user-select: none; height: 100vh; }
+bg3 { position: absolute; bottom: 0; left: 50%; transform: translate(-50%); user-select: none; }
+.item img:not(.cdtape) {position: relative; left: 50%; top: 50%; transform: translate(-50%, -50%); filter: drop-shadow(0 2px 2px #0003); transition: filter ease 128ms; cursor: url('cursorclick.png'), auto; user-select: none; }
+.item img:not(#td):hover { animation: itemhover 768ms ease infinite; filter: drop-shadow(1px 1px 0 #fff)drop-shadow(-1px -1px 0 #fff)drop-shadow(0 -2px 5px #fff); } #frame * {image-rendering:pixelated}
+@keyframes itemhover { 0% { transform: translate(-50%, -50%) scale(1); } 50% { transform: translate(-50%, -50%) scale(1.1) rotate(2deg); } 100% { transform: translate(-50%, -50%) scale(1); } }
+#td { transition: 320ms cubic-bezier(.3,.08,.19,1) !important; padding: 24px; }
+#td:hover { transform: translate(-47%, -50%) !important; filter: drop-shadow(1px 1px 0 #fff)drop-shadow(-1px -1px 0 #fff)drop-shadow(0 2px 12px #f84a4a); }
+@media (max-height: 950px) {#frame{scale:0.7;margin-left:-24px;transform-origin: bottom left;}} @font-face{font-family:'handwriting';src:url('irida/ThinPencilHandwriting.woff2') format('woff2')}
+.sold { pointer-events: none; position: absolute; filter: none !important } .sold::after { position: absolute; content: ''; top: -9px; left: 0; width: 160px; height: 132px; background: url('storepix/solddsign.png'); background-size: cover; z-index: 3; animation: sold 96ms linear; }
+.solda { pointer-events: none; position: absolute; filter: none !important; z-index: 7; } .solda::after { position: absolute; content: ''; top: 0; left: 0; width: 160px; height: 132px; background: url('storepix/soldsign.png'); background-size: cover; z-index: 3; animation: sold 96ms linear; }
+@keyframes sold { 0% { scale: 3; } 70% { scale: 0.9; } 100% { scale: 1; } } #noclick { position: absolute; left:0; top:0; width: 100vw; height: 100vh; background: #0000; z-index: 9; }
+.cd {display:flex;flex-direction:row;height:86px;line-height:99px;width: 280px; justify-content: space-between; font-family:handwriting; margin-left:4px; font-weight:bold; margin-bottom: 32px; margin-top: 12px; font-size: 26px; font-weight: bold; } .cd img:not(.cdtape) {left:62px} .cdtape{position:absolute;pointer-events:none;margin-top:-6px;left:54px;z-index:3}
+</style> <body> <div id="header-container"></div> <sky style="position: absolute; background: radial-gradient(#3aea 10%, #dee 73%);width:100vw;height:100vh"></sky> <bg1><div style="height: 58px; width: 100vw; background: url('storepix/belt.gif'); background-size: 400px; background-repeat: repeat-x; bottom: 0; position: absolute; left: 50%; transform: translate(-50%);"></div> 
+  <div id="houses" style="display: flex; flex-direction: row; margin-bottom: 55px; margin-left: 400px">  </div> 
+</bg1> <bg2 style="background: linear-gradient(to left, #cef, #cef7, #fff0 12%, #fff0 75%, #cef);"></bg2> <bg3><img src="storepix/jaffygras.jpg" draggable="false" style="width:100vw;height:403px" id="gras"></bg3> <div id="noclick" style="display: none;"></div>
+<script>const houses=document.getElementById('houses');for(let i=1;i<=(window.innerWidth<1081?5:7);i++){let e=document.createElement("img");e.style.width="400px",e.src=`/laptop/terus-frontend/texture/house0${i>5?i-5:i}.png`,houses.appendChild(e)}
+let timei=0,offset=0,addhouse=false;function conveyer(times) {timei||(timei=times);const delta=times-timei;timei=times,distance=(delta/16)*3;
+offset += distance;houses.style.transform=`translateX(-${offset}px)`;const imgs=houses.querySelectorAll('img');offset>=imgs[0].offsetWidth&&!addhouse&&(addhouse=!0,setTimeout(()=>{houses.appendChild(imgs[0]),offset-=imgs[0].offsetWidth,addhouse=!1},100));requestAnimationFrame(conveyer)}requestAnimationFrame(conveyer)
+function access(){return document.referrer.includes(window.location.origin)}access()||(window.location.href="menu/index.html");</script>
+  <div id="frame" style="visibility:visible"> <div class="floating" style="left:404px;top:-4px;z-index:1;animation: jerrot 3024ms cubic-bezier(.49,.01,.6,.94) infinite;transform-origin:top"><img src="storepix/biggersign.gif"></div>
+    <div style="display: flex; flex-direction: row; width: 110%; perspective:768px;filter:drop-shadow(5px 0px 4px #4309)" tabindex="row">
+      <div class="item" style="left:350px;top:316px;transform:rotateX(53deg)rotateZ(12deg)"> <img src="storepix/file_11.png" onclick="setTimeout(() => { location.href = '/storepix/store_l.php' }, 1024);"> </div>
+      <div class="item" style="left:480px;top:310px;transform:rotateX(53deg)"> <img src="storepix/cvgart.jpg" id="td" onclick="setTimeout(() => { location.href = '/storepix/store_c.php' }, 1024);"> </div>
+      <div class="item" style="left:599px;top:310px;transform:rotateX(13deg);filter:drop-shadow(#222 -5px 3px 0);"> <img src="storepix/boratpack.png" onclick="setTimeout(() => { location.href = 'https://4loz8bl.smlwiki.com/chumpchange.html' }, 1024);"> </div>
+      <div class="item" style="left:703px;top:329px;transform:rotateX(13deg)"> <img src="storepix/feetballs.png" onclick="setTimeout(() => { location.href = '/madden' }, 1024);"> </div>
+      <div class="item" style="left:376px;top:475px"> <img src="storepix/piano.png" onclick="localStorage.setItem('jps', true); localStorage.setItem('mailchecked', false); setTimeout(() => { location.href = '/' }, 1024);"> </div>
+      <div class="item" style="left:566px;top:478px"> <img src="storepix/marvindoll05.png" id="marvinp" onclick="localStorage.setItem('inventorymd', 'true'); setTimeout(() => { location.href = '/game/find-brooklyn-guy' }, 1024);"> </div>
+      <div class="item" style="position:absolute;left:256px;top:603px;height:80px"> <img src="storepix/radio.png" onclick="setTimeout(() => { location.href = '/index.html' }, 1024);"> </div>
+    </div>
+    <div style="display: flex; flex-direction: row; left:30px; width: 310px; top: 250px; position: absolute; height: 400px; perspective:900px">
+        <div style="display: flex; flex-direction: column; width: 100%; position: absolute; height: 100%; transform: rotateY(41deg) rotateX(-1deg) rotateZ(1deg); perspective:768px">
+            <div class="item cd" style="position: relative"> <img src="inventory/disc1.webp" style="animation:none" onclick="fetch('inventory/disc01.html').then(t=>t.text()).then(t=>localStorage.setItem('cd01',localStorage.getItem('uid')+','+t)); setTimeout(() => { location.reload() }, 1024);"> <img class="cdtape" src="storepix/tape01.png"> DISC 1 </div>
+            <div class="item cd" style="position: relative"> <img src="inventory/disc2.webp" style="animation:none" onclick="fetch('inventory/disc02.html').then(t=>t.text()).then(t=>localStorage.setItem('cd02',localStorage.getItem('uid')+','+t)); setTimeout(() => { location.reload() }, 1024);"> <img class="cdtape" src="storepix/tape02.png"> DISC 2 </div>
+        </div>
+    </div>
+
+ <img class="floating" style="top:423px;left:317px;z-index:2" src="storepix/nshack_shelf.png"><div class="floating" style="left:666px;bottom:69px;z-index:3"><img src="storepix/jerry.png" id="jer"></div><img class="floating" style="bottom:0;right:0;z-index:4" src="storepix/nshack_front.png">
+ <audio src="storepix/register.mp3" id="beep" preload="auto"></audio>
+    
+<script> window.onunload = function() {}; document.addEventListener('DOMContentLoaded', (event) => { localStorage.removeItem('itemSold2'); localStorage.removeItem('itemSold3');
+ function marksold(item, index) { if (index === 2 || index === 3) { item.classList.add('solda'); } else { item.classList.add('sold'); localStorage.setItem('itemSold' + index, 'true'); } document.getElementById('beep').play(); document.getElementById('amb').volume = 0.3; }
+ const items = document.querySelectorAll('.item'); items.forEach((item, index) => { if (localStorage.getItem('itemSold' + index) === 'true') { item.classList.add('sold');  }
+ item.querySelector('img').addEventListener('click', () => { marksold(item, index); document.getElementById('noclick').style.display = "block"; }); }); }); </script>
+</div>
+<audio src="storepix/jeffymart.ogg" autoplay loop id="amb"></audio> 
+</body> 
+<!-- Mirrored from smlwiki.com/mart.php by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 04 May 2025 13:45:53 GMT -->
+</html>
+
+<style> #inventory { position: fixed; left: 12px; bottom: 12px; height: 80px; width: 80px; background: linear-gradient(#222e, #000a 128%); border: solid 5px #0004; outline: solid 3px #111; display: flex; flex-direction: row; z-index: 3; } .inventory-slot { height: 59px !important; width: 59px !important; } </style> <div style="background: #fff0; width: 100%; height: 100vh; position: absolute; left: 0; top: 0; overflow: hidden; z-index: -1;" id="dropper"></div>
+<div id="inventory"> <span style="position: absolute; transform: translateY(-21px) translateX(-6px); color: #fffa; font-family: Arial; font-weight: 900; line-height: 1; font-size: 14px; user-select: none; letter-spacing: 0 !important;">Inventory</span>
+<div class="inventory-slot" id="inventory0empty"><img src="#" width="80" id="portrait-temp" style="display: none;"></div></div>
+<div class="droparea" style="position: absolute; left: -3px; top: -3px; width: 1px; height: 1px;" id="droppoint"></div>
+<script> let inventorymd = localStorage.getItem('inventorymd') === 'true' ? true : false; function uflg(status) { inventorymd = status; localStorage.setItem('inventorymd', status); } if (inventorymd) { udiv(); localStorage.setItem('itemSold5', 'true'); } function udiv() { fetch('inventory/marvindoll64.js') .then(response => response.text()) .then(js => { const inven = document.createElement('script'); inven.type = 'text/javascript'; inven.text = js; document.body.appendChild(inven); }) } function sda() { document.getElementById('droppoint').style.display = 'block'; setTimeout(() => { document.getElementById('droppoint').style.display = 'none' }, 33000); } function dds(event) { if (event.data === 'showdroparea') { sda(); } } window.addEventListener('message', dds, false); </script>
+
+<script src="global/global.js"></script>

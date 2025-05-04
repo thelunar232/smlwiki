@@ -1,0 +1,50 @@
+<!DOCTYPE html> 
+<!-- Mirrored from smlwiki.com/movie/food by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 04 May 2025 13:46:01 GMT -->
+<head> <meta charset="UTF-8"> <link rel="icon" type="image/x-icon" href="../favicon.ico"> <meta name="robots" content="noindex"> <title>The Food That Looks Good! - smlwiki.com</title> <meta name="description" content="'SML Movie: The Food That Looks Good!' is the 14,173rd episode of SML Movies. It is a well-regarded video according to most fans, at least for modern SML standa…"/> </head> <html lang="en"> <style> html { background-color: #000; overflow: hidden; } body { background: url('../cast/charred.gif') repeat; margin: 0; box-shadow: inset 0px 33px 93px 128px;  }
+#container { display: flex; justify-content: space-between; margin: 64px auto; max-width: 990px; }
+#descriptionBox { font-family:Arial, Helvetica, sans-serif; color: #eee; width: 256px; margin-left: 3px;background: linear-gradient(#333a, #111f); outline: solid 1px #444; padding: 10px; height: 485px; line-height: 22px; font-size: 15px; margin-top: 64px; min-width: 180px; }
+#video-container { position: relative; width: 640px; margin: 64px auto; } #video { outline: solid 1px #300; width: 640px; height: 480px; box-sizing: border-box; } #volumeSlider { width: 75px; }
+#controls { position: absolute; outline: solid 1px #100; width: 100%; background: #999; display: flex; align-items: center; height: 21px; box-sizing: border-box; }
+button.e { background: #333; cursor: url('../cursorclick.png'), auto; outline: solid 1px #333; border: solid 2px #888; color: yellow; font-size: 11px; margin-right: 3px; height: 21px; border-radius: 0% 10% 57% 43% / 81% 20% 80% 0%;}
+button.e:active { border-radius: 0% 10% 17% 43% / 11% 20% 80% 0%; transform: translateY(1px) }
+input[type="range"] { width: 100%; margin: 0 3px; } #imageContainer { flex-direction: column; display: flex; margin-top: 20px; justify-content: center; align-items: center; } #imageContainer #youtube:hover { transform: scale(1.1) rotate(-1deg);}
+.flying-image { width: 11px; filter: saturate(0) brightness(0.5); opacity: 50%; position: absolute; }
+#navbtns { position: relative; margin-top: -70px; padding-bottom: 39px; display: flex; justify-content: space-between; } #navbtns button.n { border: 2px solid #300; text-decoration: none; color: #b10000; text-shadow: #000 2px 2px 1px; padding: 0px 2px; display: block; cursor: url('../cursorclick.png'), auto; outline: outset #590000 1px; background-color: #240000; box-shadow: 0 4px 9px -1px #000; font-size: 21px; letter-spacing: -2.768px; line-height: 1 !important; font-family: I know a ghost; font-weight: bold; } button.n:hover { filter: brightness(1.4) contrast(0.9); } a { text-decoration: none !important; }
+#youtube { z-index: 3; } @media (max-height: 810px) { #container { scale: 0.8; transform: translateY(-50px); transform-origin: top; padding-bottom: 24px; } }
+</style> <body> <div id="header-container"></div>
+    <div id="container">
+        <div id="video-container">
+  <iframe src="../rancid/watch8435.html?source=bin.smlwiki.com\mov\food.mp4" width="100%" height="100%" frameborder="0" style="border: inset 3px #900; margin-left: -2px;"></iframe>
+          <div id="imageContainer">
+            <img class="image" src="blood.gif" width="640px" style="margin-top: -24px;">
+            <a href="https://youtube.com/video/erbApikL26g" target="_blank" id="youtube"><img src="yt_food.gif" style="cursor:url('../cursorclick.png'),pointer;image-rendering: pixelated;"></a>
+          </div> <div id="navbtns"><a href="dance.html"><button class="n" title="Marvin's New Dance!">⮜ Marvin's New… (#14,172)</button></a> <a href="great.html"><button class="n" title="So Great That I Needed To Talk To You Tomorrow Morning, But Now The">So Great Th… (#14,174) ⮞</button></a></div>
+        </div>
+        <div id="descriptionBox">
+          <h2>SML Movie: The Food That Looks Good!</h2>
+          <p>The Food That Looks Good is your typical modern SML slop full of everything we've come to dread but expect. It was voted worst SML Movie of the year last year for a reason.<br><br><b>Fact about production:</b><br>This was the last video starring a living Jeffy.<br><br>You can watch this shitfest by looking to your left, where it is.</p>
+        </div>
+      </div>
+<script>  if (localStorage.getItem('firstvisit') !== 'false') { window.location.href = "../index.html"; }
+  const breath = new Audio('https://bin.smlwiki.com/wav/breatheheavylonger.ogg'); breath.play(); const video = document.getElementById('video'); </script> <script>
+    const flies = 14; const flysrc = [];
+    for (let i = 0; i < flies; i++) { flyf(); }
+function flyf() {
+    const image = document.createElement('img');
+      image.src = 'insect001.gif'; image.classList.add('flying-image');
+      document.body.appendChild(image);
+    const initialX = Math.random() * window.innerWidth; const initialY = Math.random() * window.innerHeight; image.style.left = `${initialX}px`; image.style.top = `${initialY}px`;
+    flysrc.push({ element: image,
+  speedX: Math.random() * 8 - 6, speedY: Math.random() * 6 - 4, }); }
+function flyi() { for (const flyingImage of flysrc) {
+flyingImage.element.style.left = `${parseFloat(flyingImage.element.style.left) + flyingImage.speedX}px`;
+flyingImage.element.style.top = `${parseFloat(flyingImage.element.style.top) + flyingImage.speedY}px`;
+if ( parseFloat(flyingImage.element.style.left) < 0 || parseFloat(flyingImage.element.style.left) + flyingImage.element.width > window.innerWidth
+ ) { flyingImage.speedX *= -1; } if ( parseFloat(flyingImage.element.style.top) < 0 || parseFloat(flyingImage.element.style.top) + flyingImage.element.height > window.innerHeight
+ ) { flyingImage.speedY *= -1; } } requestAnimationFrame(flyi); } flyi(); </script>
+</body>
+
+<!-- Mirrored from smlwiki.com/movie/food by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 04 May 2025 13:46:02 GMT -->
+</html>
+
+<script> localStorage.setItem('misery2', true); fetch('../global/header.html') .then(response => response.text()) .then(html => { document.getElementById('header-container').innerHTML = html;  ; return fetch('../global/global.js').then(response => response.text()).then(script => eval(script)).catch(error => console.error('error fetching global js:', error));}) .catch(error => console.error('error fetching header:', error)); </script>

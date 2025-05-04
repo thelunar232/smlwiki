@@ -1,0 +1,22 @@
+<!DOCTYPE html> <title>brooklynguygame.html</title> 
+<!-- Mirrored from smlwiki.com/game/fbg/game.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 04 May 2025 13:46:38 GMT -->
+<meta name="robots" content="noindex" /> <style> :root { --game-width: 640px; --game-height: 423px; } body { margin: 0; overflow: hidden; } 
+game, #gwind { width:var(--game-width); height:var(--game-height); background-color: #000; } .load { position: absolute; z-index: 1; width:var(--game-width); height:var(--game-height); backdrop-filter: blur(5px) brightness(0.5); } 
+.preview { width:var(--game-width); height:var(--game-height); background-image: url('../gameprev_brooklyn_ref.jpg'); background-size: cover; position: absolute; }  </style>
+<game> <div class="load"><button class="googolplex-button" id="loader">LOAD</button></div> <div class="preview"></div>
+<iframe id="gwind" frameborder="0" src="about:blank"></iframe>
+</game> <script> document.getElementById("loader").onclick = function() { var game = document.querySelector("game"); game.removeChild(document.querySelector(".load")); game.removeChild(document.querySelector(".preview"));
+document.getElementById("gwind").src = "0.html"; }; document.getElementById('gwind').src = 'about:blank'; /* if (window === window.top) { window.location.href = 'about:blank'; } */ </script>
+
+<script> function loadassets(assets, suffix = '') { const load = [];
+assets.images.forEach(image => { const img = new Image(); img.src = suffix + image; load.push(new Promise((resolve, reject) => { img.onload = resolve; img.onerror = reject; })); });
+assets.videos.forEach(video => { const vid = document.createElement('video'); vid.src = suffix + video; load.push(new Promise((resolve, reject) => { vid.onloadeddata = resolve; vid.onerror = reject; })); });
+assets.sounds.forEach(sound => { const audio = new Audio(); audio.src = suffix + sound; load.push(new Promise((resolve, reject) => { audio.oncanplaythrough = resolve; audio.onerror = reject; })); });
+return Promise.all(load); } const assets = {
+images: ['0001_2.png', 'base_2.png', 'brooklyn.png', '960x0_1.jpg', 'New_Project_27_1.png', 'white-speech-bubble-quotes-box-text-box-frame-talk-chat-box-conversation-bubble-decoration-png.png', 'levels/brooklynss.webp', 'levels/brooklynss1.webp', 'levels/brooklynss2.webp', 'levels/gun.png', 'levels/1bg.png', 'levels/1fg.png', 'levels/1l2.png', 'levels/2bg.webp', 'levels/2fg.webp', 'levels/2guy.png', 'levels/4.jpg', 'levels/blood2.png', 'levels/light.png'],
+videos: ['levels/blood2.mp4', 'levels/movie1.mp4', 'levels/movie2.mp4'],
+sounds: ['awshucks.mp3', 'guy1.ogg', 'guy2.ogg', 'guy3.ogg', 'guy4.ogg', 'guyshot.ogg', 'guy5.ogg', 'guy6.ogg', 'guy7.ogg', 'score.ogg', 'womp.ogg', 'Splash.ogg', 'cutscenesound.ogg']
+}; const suffix = '';
+loadassets(assets, suffix) .then(() => console.log('some assets preloaded for smooth playback')) .catch(error => console.error('error preloading assets:', error)); </script>
+
+<style> .googolplex-button { position: absolute; left: 50%; top: calc(50% - 4px); transform: translate(-50%, -50%); box-sizing: border-box; font-family: 'Arial', sans-serif; font-weight: bold; display: inline-block; padding: 4px 15px; line-height: 15px; min-width: 60px;font-size: 13px; text-align: center; text-decoration: none;border-radius: 2px; border: solid 1px #ddd; border-bottom: 2px solid #aaa;background: linear-gradient(0deg, rgba(205,205,205) 8%, rgb(218, 218, 218) 10%, rgb(245, 244, 244) 90%);outline: solid 1px rgb(144,144,144); color: #333;box-shadow: 0px 2px 4px -2px rgba(0,0,0,0.432);cursor: pointer;}.googolplex-button:hover {    border-radius: 2px; border: solid 1px #eee; border-bottom: 2px solid #aaa;    background: linear-gradient(0deg, rgba(205,205,205) 8%, rgb(232, 232, 232) 10%, rgb(256, 256, 256) 90%);    outline: solid 1px rgb(124,124,124); color: #666;    }    .googolplex-button:active {    border-radius: 2px; border: solid 1px rgb(216, 231, 238); border-bottom: 1px solid rgb(116, 131, 138);    background: linear-gradient(0deg, rgba(205,205,205) 8%, rgb(218, 218, 218) 10%, rgb(245, 244, 244) 90%);    outline: solid 1px rgb(124,124,124); color: #555; margin-top: 2px;    box-shadow: inset 0 0.5px 5px rgba(143, 204, 233, 0.75); transition: 0.05s;    } </style>

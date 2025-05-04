@@ -1,0 +1,6 @@
+<!DOCTYPE html> <style> body { margin: 0; cursor: none; } html { overflow: hidden; background: #000; } * { user-select: none; image-rendering: pixelated; width: 640px; height: 423px; } video { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); }
+</style> <video autoplay></video> <audio src="cutscenesound.ogg" autoplay></audio> <script> document.addEventListener('DOMContentLoaded', function() { window.top.postMessage('showdroparea', '*'); }); let interval; let movement = 0; function look(direction) { const bg = document.getElementById('bg'); const increment = 1.5;
+interval = setInterval(() => { if (direction === 'left' && movement < 0) { movement += increment; } else if (direction === 'right' && movement > (640 - 753)) { movement -= increment; }
+bg.style.transform = `translateX(${movement}px)`; }, 10); } function stand() { clearInterval(interval); } </script> <script> <!--anims-->
+function setsource() { const param = new URLSearchParams(window.location.search); const video = document.querySelector('video'); if (param.has('red')) { video.src = 'levels/movie2.mp4'; } else if (param.has('grey')) { video.src = 'levels/movie1.mp4'; }
+} setsource(); setTimeout(() => { window.location.replace( "score.html", ); }, 33423); document.addEventListener('contextmenu', function (event) { event.preventDefault(); }); </script>

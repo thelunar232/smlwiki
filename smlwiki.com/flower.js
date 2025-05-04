@@ -1,0 +1,1 @@
+const flower=document.createElement("img");flower.src="newlife.png",flower.style.cssText="position:absolute;z-index:6;bottom:0;left:391px",flower.setAttribute("draggable",!1),document.querySelector(".foreground").insertBefore(flower,document.querySelector(".foreground").firstChild);

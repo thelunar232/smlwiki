@@ -1,0 +1,15 @@
+<!DOCTYPE html> 
+<!-- Mirrored from smlwiki.com/newhouse/upwards by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 04 May 2025 13:46:29 GMT -->
+<meta name="robots" content="noindex"> <link rel="icon" type="image/x-icon" href="../favicon.ico"> <title>newhouse/upwards - smlwiki.com</title> <html lang="en"> <meta charset="UTF-8"> <style> @media (max-height:700px){#frame,#stairs{scale: 0.765;}}
+body { height: 100vh; margin: 0; overflow: hidden; padding: 0; background: #000; cursor: url('../cursor.png'), auto;animation: fadeIn 1s ease-in}#frame{filter:contrast(1.2) saturate(.9);perspective:40px;width:690px;height:320px;overflow:visible;position:relative;margin:190px auto;justify-content:space-between;display:flex}.clickable{cursor:pointer;cursor:url('../cursorclick.png'),auto}
+#frame img:nth-of-type(1){transform:translate(-70px) rotateX(-.1deg) rotateY(3deg) scaleX(.91)}#frame img:nth-of-type(2){transform:translate(10px,-99px) rotateX(-.4deg) rotateY(.1deg) rotateZ(2deg) scaleX(1.2)}#frame img:nth-of-type(3){transform:translate(69px,111px) rotateX(-.1deg) rotateY(-1.3deg) rotateZ(-3deg) scaleX(1.02)}#stairs{position:absolute;left:50%;bottom:-3vh;transform:translate(-50%);transform-origin: left}@media (max-height:899px){#stairs{bottom:-128px}}#frame video{pointer-events:none;position:absolute;z-index:3;width:calc(100% + 200px);object-fit:fill;height:590px;left:-105px;top:-140px;mix-blend-mode:screen}@keyframes fadeIn{0%,42%{opacity:0%;pointer-events:none}100%{opacity:100%;pointer-events:all}}
+</style> <body> <div id="header-container"></div> 
+<div id="frame"> <video src="../pit/staticoverlay.webm" loop autoplay muted></video>
+<img src="door01.jpg" draggable="false" class="clickable" onmouseover="this.src='door04.jpg',door.currentTime=0,door.play()" onmouseout="this.src='door01.jpg'" onclick="location.href = '../movie/index.html';">
+<img src="door02.jpg" draggable="false" class="clickable" onmouseover="this.src='door04.jpg',door.currentTime=0,door.play()" onmouseout="this.src='door02.jpg'" onclick="location.href = 'phone.html';">
+<img src="door03.jpg" draggable="false" class="clickable" onmouseover="this.src='door04.jpg',door.currentTime=0,door.play()" onmouseout="this.src='door03.jpg'" onclick="location.href = 'bart.html';">
+</div> <a style="cursor:url('../cursor-down.png'),auto" id="stairs" href="hall.html"><img src="stairs.webp" draggable="false"></a>
+</body> 
+<!-- Mirrored from smlwiki.com/newhouse/upwards by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 04 May 2025 13:46:30 GMT -->
+</html>
+<script>const amb=new Audio("trifect.ogg");setTimeout(()=>{amb.play()},256),amb.loop=!0;let door=new Audio("../global/ui-08.ogg"); fetch('../global/header.html') .then(response => response.text()) .then(html => { document.getElementById('header-container').innerHTML = html; return fetch('../global/global.js').then(response => response.text()).then(script => eval(script)).catch(error => console.error('error fetching global js:', error));}) .catch(error => console.error('error fetching header:', error)); </script>

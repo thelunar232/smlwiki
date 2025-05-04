@@ -1,0 +1,43 @@
+<!DOCTYPE html> 
+<!-- Mirrored from smlwiki.com/cast/lovell by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 04 May 2025 13:45:54 GMT -->
+<head> <link rel="icon" type="image/x-icon" href="../favicon.ico"> <meta charset="UTF-8"> <meta name="robots" content="noindex"> <title>Lovell - smlwiki.com</title> <meta name="description" content="Lovell plays many beloved characters in the SML universe. He is a fan-favorite cast member for many fans, thanks to his skill and…"/> </head> <html lang="en"> <meta charset="UTF-8"><link rel="stylesheet" type="text/css" href="../characters/character_pages.css"><link rel="stylesheet" type="text/css" href="../characters/character_pages.css">
+<style> #image-container img { width: 202px !important; } body { background: url('charred.gif') center; } #container { background: linear-gradient(0deg, rgba(69,0,0) 0%, rgba(57,0,0,0.6) 69%), url('../global/grosstexture.jpg') right/cover; } .ah { text-decoration: none; color: #d00; cursor: pointer !important; } </style>
+<body> <div id="header-container"></div>
+  <div id="container"><div id="text-content">
+    <h1 style="padding-bottom: 42px; border-bottom: solid 1px #500;">Ulysses Lovell Stanton Jr.</h1>
+        <div class="text-entry">
+                <h2>Personality</h2>
+                <p>Lovell is a mostly pure soul with a positive aura. How could any of us deny that? He is grateful and enthusiastic about being here.</p>
+            </div>
+        <div class="text-entry">
+                <h2>Characters</h2>
+                <p>Lovell is famous for his roles as <a href="../charleyyy.html" class="ah">Charleyyy</a>, from the in-universe series <i>Charleyyy & Friends!</i>, <a href="../characters/chef-pee-pee.html">Chef Penis</a>, Braxton, etc.</p>
+            </div>
+        <div class="text-entry">
+                <h2>Line 3</h2>
+                <p>the ills keep suffocating the laws keep its despicable nose clean releases a Man in drag<br>
+                  when I died, they put me in a glass room and they lowered me down and I stood right back up and spat of their faces I made fun of their guns and uniforms but the noise never stopped efficacious pounding and pounding in my brain and their faces was all red and round and they cut me with their knives but I didn't complain or cry I stared back</p>
+            </div>
+                        </div>
+<div id="image-frame"> <div class="textbox">Appearance:</div> <div class="appearance-buttons">
+    <button onclick="changeAppearance('current')">Current</button>
+    <button onclick="changeAppearance('former')">Former</button>
+    <button onclick="changeAppearance('funtime')">Funtime</button> </div>
+<div id="image-container"> <img src="currentlovell.png"> </div>
+<div class="infobox">the sands of timE and gaze of Death
+  <br>some call it fate, or even destiny, bUt to me, this Is war.
+  <br>every-thing has a CosT.</div> </div>
+  </div>
+<script> const amb = new Audio('../irida/badfreq_alt.ogg'); amb.loop = true; setTimeout(()=>{amb.play()},256); changeAppearance('current');
+function changeAppearance(appearance) {
+  const buttons = document.querySelectorAll('.appearance-buttons button');
+        buttons.forEach(btn => btn.classList.remove('pressed'));
+  const image = document.querySelector('#image-container img');
+       if (appearance === 'current') { image.src = 'currentlovell.png'; amb.volume = 1
+} else if (appearance === 'former') { image.src = 'starch.jpg'; amb.volume = 1
+} else if (appearance === 'funtime') { image.src = 'large.jpg'; amb.volume = 0.0 }
+  const pressedButton = Array.from(buttons).find(button => button.innerText.toLowerCase().includes(appearance)); pressedButton.classList.add('pressed'); }
+</script> </body> 
+<!-- Mirrored from smlwiki.com/cast/lovell by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 04 May 2025 13:45:55 GMT -->
+</html>
+<script> fetch('../global/header.html') .then(response => response.text()) .then(html => { document.getElementById('header-container').innerHTML = html;  ; return fetch('../global/global.js').then(response => response.text()).then(script => eval(script)).catch(error => console.error('error fetching global js:', error));}) .catch(error => console.error('error fetching header:', error)); </script>

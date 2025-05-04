@@ -1,0 +1,42 @@
+<!DOCTYPE html> 
+<!-- Mirrored from smlwiki.com/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 04 May 2025 13:45:12 GMT -->
+<meta name="robots" content="noindex"> <html lang="en"> <meta charset="UTF-8"> <style> body { background: #000; margin: 0; overflow: hidden; }
+.center { text-align: center; max-width: 660px; color: #eee; font-size: 25px; line-height: 19px; }
+#email { filter: blur(4px) brightness(4); user-select: none; cursor: url('cursorclick.png'), auto; } #email:hover { color: #fafafa; }
+#front { position: absolute; left: 50%; top: calc(50% + 20px); transform: translate(-50%, -50%); width: max-content; padding: 42px; }
+.writable_block { border: 0; outline: 0; padding: 8px; resize: none; font-family: I know a ghost; font-size: 19px; letter-spacing: -1px; line-height: 1; padding-left: 45px; overflow: hidden; }
+#donebtn { border: dotted 1px #666; background-color: #ddda; border-radius: 2px; font-size: 13px; } #donebtn:hover { background: #dddc; cursor: url('cursorclick.png'), auto; }
+@keyframes bintoss { 0% { left: 122px; bottom: 256px; rotate: 12deg; } 46% { left: 79px; bottom: 82px; rotate: 12deg; } 80% { left: 79px; bottom: 85px; rotate: 1deg; } 100% { left: 79px; bottom: 82px; rotate: 2deg; } }
+#thrown { display: none; } #holdingpaper { pointer-events: none } @font-face{font-family:'handwriting';src:url('irida/ThinPencilHandwriting.woff2') format('woff2')}
+</style>
+<body> <div id="dragarea" style="position: absolute; width: 100%; height: 100%;"></div> <div id="header-container"></div> 
+<div id="front">
+<div class="center">
+<h2 style="color: #d22">Contact / Complaints</h2>
+<div>Need to file a complaint? Simply write us a letter<br> and drag it to the mail-collecting container.</div>
+</div>
+<div style="margin: auto; width: 520px; height: 364px; background: url('msg.jpg');">
+
+<div id="droparea" style="position: absolute; bottom: 292px; left: 50px; width: 116px; height: 69px; padding: 32px; z-index: 3"></div>
+<img src="can.png" style="position: absolute; left: 46px; bottom: 62px;">
+<img src="letter03.png" width="120" style="position: absolute; left: 79px; bottom: 82px; animation: bintoss 256ms linear;" id="thrown">
+<img src="canfront.gif" style="position: absolute; left: 46px; bottom: 62px;">
+<textarea class="writable_block" style="position: absolute; right: 66px; bottom: 92px; background: url('letter01.png'); font-family:handwriting;font-size:14px;line-height:1.4;letter-spacing:.2px; width: 153px; height: 261px;" maxlength="180" id="paperint"></textarea><button style="position: absolute; bottom: 80px; right: 143px;" id="donebtn">Done</button>
+</div>
+<div class="center" style="margin-top:32px">
+<div style="color: #0000;font-size:20px;visibility:hidden">()</div>
+</div>
+</div> <audio src="https://nez.fyi/sml-assets/paper01.ogg" id="paper01"></audio> <audio src="https://nez.fyi/sml-assets/paper02.ogg" id="paper02"></audio> <img src="crumple.gif" style="display: none;">
+</body>
+
+<script> document.getElementById('donebtn').addEventListener('click', function() {
+this.style.display = 'none'; document.getElementById('paperint').style.display = 'none';
+ let paper = document.getElementById('holdingpaper'); if (!paper) { paper = document.createElement('img'); paper.src = 'crumple.gif'; setTimeout(() => { paper.src = 'letter03.png'; }, 320); paper.id = 'holdingpaper'; paper.style.position = 'absolute'; paper.style.zIndex = '1000'; document.body.appendChild(paper); paper.style.left = event.pageX - 60 + 'px'; paper.style.top = event.pageY - 60 + 'px'; }
+function dragpaper(event) { paper.style.left = event.pageX - 60 + 'px'; paper.style.top = event.pageY - 60 + 'px'; }
+function dropfunct(event) { event.stopPropagation(); if (event.target.id === 'droparea') { document.getElementById('thrown').style.display = 'block'; document.body.removeEventListener('mousemove', dragpaper); paper.remove(); document.getElementById('paper02').play(); setTimeout(() => { document.getElementById('paper02').muted = true }, 256); setTimeout(() => { location.href = "index.html"; }, 2048); } }
+ document.body.addEventListener('mousemove', dragpaper); document.getElementById('droparea').addEventListener('mousemove', dropfunct); document.getElementById('paper01').play(); }); </script>
+
+<!-- Mirrored from smlwiki.com/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 04 May 2025 13:45:14 GMT -->
+</html>
+
+<script> fetch('global/header.html') .then(response => response.text()) .then(html => { document.getElementById('header-container').innerHTML = html;  ; return fetch('global/global.js').then(response => response.text()).then(script => eval(script)).catch(error => console.error('error fetching global js:', error));}) .catch(error => console.error('error fetching header:', error)); </script>

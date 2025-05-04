@@ -1,0 +1,58 @@
+HTTrack3.49-2+htsswf+htsjava launched on Sun, 04 May 2025 08:44:32 at https://smlwiki.com/ +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar +*.css +*.js +*.svg +*.woff +*.woff2 +*.ttf +*.eot +*.mp4 +*.webm +*.mov +*.mpg +*.mpeg +*.avi +*.asf +*.mp3 +*.mp2 +*.rm +*.wav +*.vob +*.qt +*.vid +*.ac3 +*.wma +*.wmv +*.zip +*.tar +*.tgz +*.gz +*.rar +*.z +*.exe +*.gif +*.jpg +*.jpeg +*.png +*.tif +*.bmp
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A100000000%c10%f#f -F "Mozilla/5.0 (Windows NT 10.0; Win64; x64)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" https://smlwiki.com/ -O1 "C:\Users\mrlun\3D Objects\smlwiki" +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar +*.css +*.js +*.svg +*.woff +*.woff2 +*.ttf +*.eot +*.mp4 +*.webm +*.mov +*.mpg +*.mpeg +*.avi +*.asf +*.mp3 +*.mp2 +*.rm +*.wav +*.vob +*.qt +*.vid +*.ac3 +*.wma +*.wmv +*.zip +*.tar +*.tgz +*.gz +*.rar +*.z +*.exe +*.gif +*.jpg +*.jpeg +*.png +*.tif +*.bmp )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+08:44:32	Warning: 	* security warning: maximum bandwidth limited to 250000 to avoid server overload
+08:44:32	Warning: 	* security warning: maximum number of connections per second limited to 5.000000 to avoid server overload
+08:45:27	Warning: 	Moved Temporarily for https://c.s-microsoft.com/robots.txt
+08:45:27	Warning: 	File has moved from https://c.s-microsoft.com/robots.txt to https://www.microsoft.com/robots.txt
+08:45:27	Warning: 	Note: due to https://nez.fyi remote robots.txt rules, links beginning with these path will be forbidden: /sml-assets/, /searchystuff/, /js,html,css/, /g-assets/, /card.vcf, /minecraft/, /minecraft/* (see in the options to disable this)
+08:45:32	Error: 	"Not Found" (404) at link https://smlwiki.com/menu/global/headertop.jpeg (from https://smlwiki.com/menu/)
+08:45:32	Error: 	"Not Found" (404) at link https://smlwiki.com/menu/cast/charred.gif (from https://smlwiki.com/menu/)
+08:45:32	Error: 	"Not Found" (404) at link https://smlwiki.com/menu/cast/large.jpg (from https://smlwiki.com/menu/)
+08:45:32	Error: 	"Not Found" (404) at link https://smlwiki.com/menu/global/grosstexture.jpeg (from https://smlwiki.com/menu/)
+08:45:32	Error: 	"Not Found" (404) at link https://smlwiki.com/menu/characters/user-submissions/woody1.png (from https://smlwiki.com/menu/)
+08:45:32	Error: 	"Not Found" (404) at link https://smlwiki.com/menu/page/key.png (from https://smlwiki.com/menu/)
+08:45:32	Error: 	"Not Found" (404) at link https://smlwiki.com/menu/characters/juniorr.jpg (from https://smlwiki.com/menu/)
+08:45:32	Error: 	"Not Found" (404) at link https://smlwiki.com/menu/newhouse/bartstep.ogg (from https://smlwiki.com/menu/)
+08:45:32	Error: 	"Not Found" (404) at link https://smlwiki.com/menu/characters/searchbar.png (from https://smlwiki.com/menu/)
+08:45:32	Error: 	"Not Found" (404) at link https://smlwiki.com/menu/newhouse/door04.jpeg (from https://smlwiki.com/menu/)
+08:45:32	Error: 	"Not Found" (404) at link https://smlwiki.com/menu/characters/hellisreel.ogg (from https://smlwiki.com/menu/)
+08:45:32	Error: 	"Not Found" (404) at link https://smlwiki.com/menu/irida/badfreq2.ogg (from https://smlwiki.com/menu/)
+08:45:32	Error: 	"Not Found" (404) at link https://smlwiki.com/menu/global/ui-08.ogg (from https://smlwiki.com/menu/)
+08:45:32	Error: 	"Not Found" (404) at link https://smlwiki.com/menu/axe.ogg (from https://smlwiki.com/menu/)
+08:45:32	Error: 	"Not Found" (404) at link https://smlwiki.com/menu/characters/fuckedpeepee.ogg (from https://smlwiki.com/menu/)
+08:45:32	Error: 	"Not Found" (404) at link https://smlwiki.com/menu/newhouse/trifect.ogg (from https://smlwiki.com/menu/)
+08:45:32	Error: 	"Not Found" (404) at link https://smlwiki.com/menu/ken_ohgod2.ogg (from https://smlwiki.com/menu/)
+08:45:32	Error: 	"Not Found" (404) at link https://smlwiki.com/menu/ken_ohgod.ogg (from https://smlwiki.com/menu/)
+08:45:32	Error: 	"Not Found" (404) at link https://smlwiki.com/menu/ken_squirm.ogg (from https://smlwiki.com/menu/)
+08:45:32	Error: 	"Not Found" (404) at link https://smlwiki.com/menu/newhouse/CHARLEYYY_rvb-04-Check_the_mail.ogg (from https://smlwiki.com/menu/)
+08:45:32	Error: 	"Not Found" (404) at link https://smlwiki.com/menu/laptop/terus-frontend/exe/bnoiseslow.ogg (from https://smlwiki.com/menu/)
+08:45:32	Error: 	"Not Found" (404) at link https://smlwiki.com/menu/newhouse/mailbox01.ogg (from https://smlwiki.com/menu/)
+08:45:32	Error: 	"Not Found" (404) at link https://smlwiki.com/menu/newhouse/mailbox02.ogg (from https://smlwiki.com/menu/)
+08:45:32	Error: 	"Not Found" (404) at link https://smlwiki.com/menu/characters/cody.jpg (from https://smlwiki.com/menu/)
+08:45:57	Error: 	"Not Found" (404) at link https://smlwiki.com/${wallpaper} (from https://smlwiki.com/computer)
+08:45:59	Error: 	"Not Found" (404) at link https://smlwiki.com/laptop/terus-frontend/argwintrophy.png?01 (from https://smlwiki.com/laptop/terus-frontend/wincheck-64.php)
+08:45:59	Error: 	"Not Found" (404) at link https://smlwiki.com/laptop/terus-frontend/charadters/jeffy (from https://smlwiki.com/laptop/terus-frontend/wincheck-64.php)
+08:46:22	Error: 	"Not Found" (404) at link https://smlwiki.com/irida/danielbd.ttf (from https://smlwiki.com/mart.php)
+08:46:31	Error: 	"Not Found" (404) at link https://smlwiki.com/laptop/terus-frontend/termina/POST (from https://smlwiki.com/laptop/terus-frontend/termina/user.html)
+08:46:31	Error: 	"Unable to get server's address: unknown error" (-5) after 2 retries at link https:///robots.txt (from https://smlwiki.com/barbus)
+08:46:31	Warning: 	Retry after error -5 (Unable to get server's address: unknown error) at link https:///bin.smlwiki.com/mov/godtellsme.mp4 (from https://smlwiki.com/barbus)
+08:46:31	Error: 	"Not Found" (404) at link https://smlwiki.com/${getsm( (from https://smlwiki.com/barbus)
+08:46:31	Error: 	"Not Found" (404) at link https://smlwiki.com/${sprites} (from https://smlwiki.com/barbus)
+08:46:37	Error: 	"Not Found" (404) at link https://smlwiki.com/movie/${newBgImageUrl} (from https://smlwiki.com/movie/misery)
+08:46:57	Warning: 	Retry after error -5 (Unable to get server's address: unknown error) at link https:///bin.smlwiki.com/mov/godtellsme.mp4 (from https://smlwiki.com/barbus)
+08:46:57	Warning: 	Note: due to https://v.nez.fyi remote robots.txt rules, links beginning with these path will be forbidden: / (see in the options to disable this)
+08:46:57	Error: 	"Not Found" (404) at link https://smlwiki.com/movie/fakeheader/fakeheader/fakeheadertop.jpeg (from https://smlwiki.com/movie/fakeheader/)
+08:46:57	Error: 	"Not Found" (404) at link https://smlwiki.com/movie/fakeheader/fakeheader/superluigilogan.png (from https://smlwiki.com/movie/fakeheader/)
+08:46:58	Error: 	"Not Found" (404) at link https://smlwiki.com/inventory/irida.html (from https://smlwiki.com/inventory/card6.php)
+08:46:58	Error: 	"Not Found" (404) at link https://smlwiki.com/inventory/irida.jpg (from https://smlwiki.com/inventory/card6.php)
+08:47:01	Error: 	"Unable to get server's address: unknown error" (-5) after 2 retries at link https:///bin.smlwiki.com/mov/godtellsme.mp4 (from https://smlwiki.com/barbus)
+08:47:03	Error: 	"Not Found" (404) at link https://smlwiki.com/game/fbg/sungod02.png (from https://smlwiki.com/game/fbg/1.html)
+
+HTTrack Website Copier/3.49-2 mirror complete in 2 minutes 35 seconds : 605 links scanned, 559 files written (89408286 bytes overall) [89179293 bytes received at 575350 bytes/sec], 855562 bytes transferred using HTTP compression in 161 files, ratio 40%, 15.4 requests per connection
+(39 errors, 8 warnings, 0 messages)

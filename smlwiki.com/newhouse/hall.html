@@ -1,0 +1,24 @@
+<!DOCTYPE html> 
+<!-- Mirrored from smlwiki.com/newhouse/hall by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 04 May 2025 13:45:56 GMT -->
+<meta name="robots" content="noindex"> <link rel="icon" type="image/x-icon" href="../favicon.ico"> <title>newhouse/hall - smlwiki.com</title> <html lang="en"> <meta charset="UTF-8"> <style>
+body { margin: 0; padding: 0; background-color: #000; cursor: url('../cursor.png'), auto;}
+#frame { width: 640px; height: 480px; overflow: hidden; position: relative; border: 1px solid #200; margin: 64px auto; animation: fadeIn 1s ease-in; }
+#front-image { width: 100%; height: 100%; animation: camShake 13s ease-in-out infinite; }
+@keyframes fadeIn { 0% { opacity: 0%; } 42% { opacity: 0%; } 100% { opacity: 100%; } }
+@keyframes camShake { 0% { transform: translate(0, 5px) rotate(0deg) scale(1.04); } 25% { transform: translate(2px, 5px) rotate(1deg) scale(1.04); } 50% { transform: translate(2px, 0) rotate(0.3deg) scale(1.04); } 75% { transform: translate(-5px, 2px) rotate(-1.5deg)  scale(1.04); } 100% { transform: translate(0, 5px) rotate(0deg) scale(1.04); } }
+.clickable {position:absolute;cursor: url('../cursorclick.png'), auto}
+#particle-canvas { filter: blur(3px) opacity(9%); position: absolute; top: 0; left: 0; pointer-events: none; width: 640px; height: 480px; }
+#arrow { z-index: 3; position: absolute; bottom: 12px; left: 50%; transform: translateX(-50%); opacity: 0.3; transition: ease 128ms; } #arrow:hover { opacity: 0.8; }
+</style> <body> <div id="header-container"></div> <div style="position:absolute;left:0;top:0;width:100vw;height:100vh;background:#0000;"></div>
+<div id="frame"> <img id="front-image" src="1.webp" draggable="false"> <canvas id="particle-canvas"></canvas>
+  <a href="dollroom.html"><div class="clickable" style="top: 50px; left: 199px; width: 42px; height: 390px;"></div></a>
+  <a href="eyes.html"><div class="clickable" style="top: 90px; left: 256px; width: 32px; height: 320px;"></div></a>
+  <a href><div class="clickable" style="top: 135px; left: 326px; width: 102px; height: 160px;"></div></a>
+  <a href="upwards.html"><div class="clickable" style="top: 128px; right: 0px; width: 142px; height: 320px;"></div></a>
+  <a href="crew.html" id="arrow" class="clickable"><img src="arrowleft.png"></a>
+</div>
+<script> const canvas=document.getElementById("particle-canvas"),ctx=canvas.getContext("2d");canvas.width=640,canvas.height=480;const particles=[];function makepartic(){if(.15>Math.random()){let a={x:Math.random()*canvas.width,y:canvas.height,radius:3*Math.random()+.4,color:"#fff",speed:3*Math.random()+1,horizontalSpeed:7*Math.random()-.1};particles.push(a)}}function drawParticles(){ctx.clearRect(0,0,canvas.width,canvas.height),particles.forEach((a,t)=>{ctx.fillStyle=a.color,ctx.beginPath(),ctx.arc(a.x,a.y,a.radius,0,1.5*Math.PI),ctx.fill(),a.y-=a.speed,a.x+=a.horizontalSpeed,(a.y<0||a.x<0||a.x>canvas.width)&&particles.splice(t,1)})}function animateParticles(){makepartic(),drawParticles(),requestAnimationFrame(animateParticles)}animateParticles();
+const amb = new Audio('../irida/ambience2.ogg'); setTimeout(()=>{amb.play()},256); amb.loop = true;</script> </body> 
+<!-- Mirrored from smlwiki.com/newhouse/hall by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 04 May 2025 13:45:57 GMT -->
+</html>
+<script> fetch('../global/header.html') .then(response => response.text()) .then(html => { document.getElementById('header-container').innerHTML = html;  ; return fetch('../global/global.js').then(response => response.text()).then(script => eval(script)).catch(error => console.error('error fetching global js:', error));}) .catch(error => console.error('error fetching header:', error)); </script>

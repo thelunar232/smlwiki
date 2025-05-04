@@ -1,0 +1,39 @@
+<html lang="en">
+<!-- Mirrored from smlwiki.com/characters/cody by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 04 May 2025 13:45:36 GMT -->
+<head> <link rel="icon" type="image/x-icon" href="../favicon.ico"> <meta charset="UTF-8"> <meta name="robots" content="noindex"> <title>Cody - smlwiki.com</title> <meta name="description" content="Cody is a hunky dude. He is known for being the straight-man of the main three, which is ironic, for he is a homosexual. Cody is often seen in his classy blue…"> <link rel="stylesheet" href="character_pages.css" as="style" onload="this.onload=null;this.rel='stylesheet'"></head>   <body><link rel="stylesheet" type="text/css" href="character_pages.css">
+<style> .gallery { white-space: nowrap;  width: 128px; height: 128px; display: inline-block; } .gallery img { margin-right: 13px; border: solid 1px; width: 158px; height: 113px; } </style>
+ <div id="header-container"></div>
+  <div id="container"><div id="text-content">
+    <h1 style="padding-bottom: 42px; border-bottom: solid 1px #500;">Cody Dennis Nutkiss</h1>
+        <div class="text-entry">
+                <h2>Cody's Voice</h2>
+                <p>Cody is the only one to have the ability to speak in full, comprehensible sentences. The hand that comes out of his body beckons those around him to come closer. Penelope has fallen victim among many others. Cody is often separated from the rest because of this. </p>
+            </div>
+        <div class="text-entry">
+                <h2>Relationships</h2>
+                <p><b><a href="junior.html">Junior</a></b><br>Of everyone contained, Cody has the most interest in Junior. Cody is often seen with, or around Junior the most out of everyone.<br><b><a href="joseph.html">Joseph</a></b><br>The two are often not seen near each other, due to Cody's danger and Joseph's shut-in nature. It is clear that the two don't seem to like one another, as both stare at each other for periods of time whenever the two are in the same room. </p>
+            </div>
+        <div class="text-entry">
+                <h2>Gallery</h2>
+                <div class="gallery"><a href="#" onclick="window.location.replace('../ken.html')"><img src="ken.jpg"></a><img src="codyken.jpg"></div></div>
+                        </div>
+<div id="image-frame"> <div class="textbox">Appearance:</div> <div class="appearance-buttons">
+    <button onclick="changeAppearance('current')" class="pressed">Current</button>
+    <button onclick="changeAppearance('former')">Former</button> </div>
+<div id="image-container"> <img src="cody.jpg"> </div>
+<div class="infobox">died. also made this really embarrassing song: <iframe src="../rancid/watch9070.html?source=ogg.nez.fyi/dojin_letters.ogg&amp;looponend" frameborder="0" height="26" style="margin: 5px 2px; width: calc(100% - 6px);"></iframe> </div> </div>
+  </div>
+<script> changeAppearance('current');
+function changeAppearance(appearance) {
+  const buttons = document.querySelectorAll('.appearance-buttons button');
+        buttons.forEach(btn => btn.classList.remove('pressed'));
+  const image = document.querySelector('#image-container img');
+       if (appearance === 'current') { image.src = 'cody.jpg';
+} else if (appearance === 'former') { image.src = 'codee.jpg'; }
+  const pressedButton = Array.from(buttons).find(button => button.innerText.toLowerCase().includes(appearance)); pressedButton.classList.add('pressed'); }
+const audio = new Audio('../irida/char.ogg'); audio.loop = true;
+</script>  
+
+<script> fetch('../global/header.html') .then(response => response.text()) .then(html => { document.getElementById('header-container').innerHTML = html;  ; return fetch('../global/global.js').then(response => response.text()).then(script => eval(script)).catch(error => console.error('error fetching global js:', error));}) .catch(error => console.error('error fetching header:', error)); </script></body>
+<!-- Mirrored from smlwiki.com/characters/cody by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 04 May 2025 13:45:37 GMT -->
+</html>

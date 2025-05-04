@@ -1,0 +1,39 @@
+<!DOCTYPE html> 
+<!-- Mirrored from smlwiki.com/characters/junior by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 04 May 2025 13:45:35 GMT -->
+<head> <link rel="icon" type="image/x-icon" href="../favicon.ico"> <meta charset="UTF-8"> <meta name="robots" content="noindex"> <title>Junior - smlwiki.com</title> <meta name="description" content="Junior is a major character in SML. Junior is regarded for his silly antics and hysterics. He commonly bothers Chef PeePee, who is a big opponent to his behavio…"/> </head> <html lang="en"><link rel="stylesheet" type="text/css" href="character_pages.css">
+<body> <div id="header-container"></div>
+  <div id="container"><div id="text-content">
+    <h1 style="padding-bottom: 42px; border-bottom: solid 1px #500;">Braxton Jr.</h1>
+        <div class="text-entry">
+                <h2>Essence</h2>
+                <p>Junior, with an unwavering gaze, peers into the souls of those in his midst. Return his stare, and you'll sense the haunting trifecta of despair, dread, and the inexorable specters of horror and death. I solemnly swear, it is not solely his eyes fixed upon me; it is as though he serves as a foreboding messenger, a sentinel with unseen shadows trailing behind him.  </p>
+            </div>
+        <div class="text-entry">
+                <h2>Visage</h2>
+                <p>Junior has the face of God. </p>
+            </div>
+        <div class="text-entry">
+                <h2>Quotes</h2>
+                <p>"Sing, O goddess, the anger of Peleus' son Achilles that caused the Greeks untold pain, hurling many valiant souls to Hades and leaving their bodies as feasts for dogs and birds, as the will of Zeus unfolded."<br> -<a href="homer.html">Homer</a>, "The Iliad" </p>
+            </div>
+                        </div>
+<div id="image-frame"> <div class="textbox">Gaze:</div> <div class="appearance-buttons">
+    <button onclick="changeAppearance('apotheosis')">apotheosis</button>
+    <button onclick="changeAppearance('abasement')">abasement</button> </div>
+<div id="image-container"> <img src="juniorr.jpg"> </div>
+<div class="infobox">he resides yet within the sanctum, enduring amidst the echoes of time's embrace </div> </div>
+  </div>
+<script> changeAppearance('apotheosis');
+function changeAppearance(appearance) {
+  const buttons = document.querySelectorAll('.appearance-buttons button');
+        buttons.forEach(btn => btn.classList.remove('pressed'));
+  const image = document.querySelector('#image-container img');
+       if (appearance === 'apotheosis') { image.src = 'juniorr.jpg';
+} else if (appearance === 'abasement') { image.src = 'juniorrr.png'; }
+  const pressedButton = Array.from(buttons).find(button => button.innerText.toLowerCase().includes(appearance)); pressedButton.classList.add('pressed'); }
+const amb = new Audio('../irida/char.ogg'); amb.loop = true; setTimeout(()=>{amb.play()},256);
+</script> </body> 
+<!-- Mirrored from smlwiki.com/characters/junior by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 04 May 2025 13:45:35 GMT -->
+</html>
+
+<script> fetch('../global/header.html') .then(response => response.text()) .then(html => { document.getElementById('header-container').innerHTML = html;  ; return fetch('../global/global.js').then(response => response.text()).then(script => eval(script)).catch(error => console.error('error fetching global js:', error));}) .catch(error => console.error('error fetching header:', error)); </script>

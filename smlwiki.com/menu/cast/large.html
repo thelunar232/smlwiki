@@ -1,0 +1,4 @@
+<!DOCTYPE html><head><meta charset="UTF-8"><meta name="robots" content="noindex"></head>
+<body bgcolor="black" style="overflow:hidden"> <div id="header-container" style="opacity:0.4;transition:opacity 128ms" onmouseenter="this.style.opacity='1'" onmouseleave="this.style.opacity='0.8'"></div>
+<div style="position:absolute;top:0;width:100vw;height:100vh;z-index:-2"></div><center style="margin-top:40vh"><font color="darkred"><h1>404</h1><b>Not found</b></font></center>
+<script>fetch("/global/header.html").then(e=>e.text()).then(html=>(document.getElementById("header-container").innerHTML=html,fetch("/global/global.js").then(e=>e.text()).then(script=>eval(script)).catch(e=>console.error("error fetching global js:",e)))).catch(e=>console.error("error fetching header:",e))</script></body>

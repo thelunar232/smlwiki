@@ -1,0 +1,8 @@
+-qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A100000000%c10%f#f -F "Mozilla/5.0 (Windows NT 10.0; Win64; x64)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" https://smlwiki.com/ -O1 "C:\Users\mrlun\3D Objects\smlwiki" +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar +*.css +*.js +*.svg +*.woff +*.woff2 +*.ttf +*.eot +*.mp4 +*.webm +*.mov +*.mpg +*.mpeg +*.avi +*.asf +*.mp3 +*.mp2 +*.rm +*.wav +*.vob +*.qt +*.vid +*.ac3 +*.wma +*.wmv +*.zip +*.tar +*.tgz +*.gz +*.rar +*.z +*.exe +*.gif +*.jpg +*.jpeg +*.png +*.tif +*.bmp
+File generated automatically on Sun, 04 May 2025 08:44:32, do NOT edit
+
+To update a mirror, just launch httrack without any parameters
+The existing cache will be used (and modified)
+To have other options, retype all parameters and launch HTTrack
+To continue an interrupted mirror, just launch httrack without any parameters
+
