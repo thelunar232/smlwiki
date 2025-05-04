@@ -1,0 +1,49 @@
+<!DOCTYPE html> 
+<!-- Mirrored from smlwiki.com/characters/chris-the-cucumber by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 04 May 2025 13:45:38 GMT -->
+<head> <link rel="icon" type="image/x-icon" href="../favicon.ico"> <meta charset="UTF-8"> <meta name="robots" content="noindex"> <title>Chris the Cucumber - smlwiki.com</title> <meta name="description" content="…"/> </head> 
+<html lang="en"><link rel="stylesheet" type="text/css" href="character_pages.css"> <style> #authorsign { position: absolute; bottom: 3px; right: 3px; font-size: 13px; font-weight: bold; font-style: italic; color: #756a; font-family: Consolas; text-align: right; } #authorsign:hover { color: #765; } </style>
+
+<body> <div id="header-container"></div>
+  <div id="container"><div id="text-content">
+    <h1 style="padding-bottom: 42px; border-bottom: solid 1px #500;">Chris the Cucumber</h1>
+        <div class="text-entry">
+                <h2>Description</h2>
+                <p>Chris the Cucumber is a talking pickle that loved to tell true facts and feed the homeless—but ever since <a href="chef-pee-pee.html">Chef Pee Pee</a> put him into that pickle jar, he hasn't been the same.</p>
+            </div>
+        <div class="text-entry">
+                <h2>Behavior</h2>
+                <p>He tends to hide in <a href="../game/house-2.html">the old house</a> waiting for a poor soul there to ask a question.</p>
+            </div>
+        <div class="text-entry">
+                <h2>Occupation</h2>
+                <p>Ripping out eyeballs. It's speculated that he is the one who ripped out Chef Pee <a href="../../www.shutterstock.com/shutterstock/photos/1618446370/display_1500/stock-photo-a-tooth-brush-on-a-hygienic-background-with-a-green-pea-on-it-people-should-use-the-size-of-a-1618446370.jpg">Pee's eyes</a>.</p>
+            </div>
+        <div class="text-entry">
+                <h2>Quotes</h2>
+                <p>
+<i>"Did you know that 3 sips of beer is the cure for a panic attack?"
+<br>"Did you know that over the course of a year, 5-10 cockroaches will crawl into your <a href="chef-pee-pee.html">penis hole</a> while you are asleep?"
+<br>"Murder is what keeps me going in a day."
+</i></p>
+            </div>
+    <span id="authorsign">Page submitted by 'BoyOHBoy <span style="color: #446">[Admin]</span>'</span>
+                        </div>
+<div id="image-frame"> <div class="textbox">Appearance:</div> <div class="appearance-buttons"> 
+    <button onclick="changeAppearance('current')">Current</button>
+    <button onclick="changeAppearance('former')">Former</button> </div>
+<div id="image-container"> <img src="user-submissions/chris.jpg"> </div>
+<div class="infobox">he looks like the dude from sesame street</div> </div> </div>
+</body> 
+<!-- Mirrored from smlwiki.com/characters/chris-the-cucumber by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 04 May 2025 13:45:38 GMT -->
+</html>
+<script> changeAppearance('current');
+function changeAppearance(appearance) {
+  const buttons = document.querySelectorAll('.appearance-buttons button');
+        buttons.forEach(btn => btn.classList.remove('pressed'));
+  const image = document.querySelector('#image-container img');
+       if (appearance === 'current') { image.src = 'user-submissions/chris.jpg';
+} else if (appearance === 'former') { image.src = 'user-submissions/previouschris.jpg'; }
+  const pressedButton = Array.from(buttons).find(button => button.innerText.toLowerCase().includes(appearance)); pressedButton.classList.add('pressed'); }
+const amb = new Audio('https://nez.fyi/sml-assets/cucumber.ogg'); amb.loop = true; setTimeout(()=>{amb.play()},256);
+</script>
+<script>fetch("../global/header.html").then(e=>e.text()).then(html=>(document.getElementById("header-container").innerHTML=html,fetch("../global/global.js").then(e=>e.text()).then(script=>eval(script)).catch(e=>console.error("error fetching global js:",e)))).catch(e=>console.error("error fetching header:",e));</script>

@@ -1,0 +1,8 @@
+<!DOCTYPE html> <style> body { margin: 0; } html { overflow: hidden; } * { image-rendering: pixelated; }
+#levelarea { width: 640px; height: 423px; box-sizing: border-box; overflow: hidden; display: block; position: relative; background: #000; text-align: center; color: #fff; font-family: Arial; font-weight: 900; }
+#front { margin: auto; margin-top: 159px; font-size: 50px; }
+</style> <div id="levelarea"> <div style="margin-top: 81px; margin-bottom: -111px; font-size: 21px; display: none;">Total score:</div> 
+<div id="front">WRONG GUY! :(</div> <div style="margin-top: 81px; margin-bottom: -111px; font-size: 28px; display: none;">That's ok!</div> 
+</div> <audio src="womp.ogg" id="womp" autoplay></audio> <audio src="score.ogg" id="score"></audio> <script>
+setTimeout(function() { let count = 0; const interval = setInterval(function() { document.getElementById('front').textContent = count + '/412'; count++; if (count > 309) { clearInterval(interval); } }, 1);
+document.querySelector('div[style="margin-top: 81px; margin-bottom: -111px; font-size: 21px; display: none;"]').style.display = 'block'; document.getElementById("score").play(); setTimeout(function() { document.querySelector('div[style="margin-top: 81px; margin-bottom: -111px; font-size: 28px; display: none;"]').style.display = 'block';}, 1900); }, 800); setTimeout(function() { window.location.replace( "0.html", ); }, 5400); </script>

@@ -1,0 +1,37 @@
+<!DOCTYPE html> 
+<!-- Mirrored from smlwiki.com/newhouse/phone by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 04 May 2025 13:46:49 GMT -->
+<meta name="robots" content="noindex"> <link rel="icon" type="image/x-icon" href="../favicon.ico"> <title>newhouse/phone - smlwiki.com</title> <html lang="en"> <meta charset="UTF-8"> <style>
+body { overflow: hidden; margin: 0; padding: 0; background-color: #000; cursor: url('../cursor.png'), auto;} #frame { width: 706px; height: 706px; overflow: hidden; position: absolute; left:50%; top:50%; z-index: -1; transform: translate(-50%, -50%); } .clickable { cursor: pointer; cursor: url('../cursorclick.png'), auto; }
+#phone { width: 706px; height: 706px; background: url('phone_00.webp'); transform: translateX(-23px) translateY(12px) scale(0.92); user-select: none; } .btn { position: absolute; opacity: 0; width: fit-content; user-select: none; }
+ .btn:active { opacity: 1; } #alone { position: fixed; z-index: 12; width: 100vw; height: 1-0vh; top: 0; background: #000a; line-height: 97vh; color: #fff; font-size: 40px; margin: auto; text-align: center; } #handset { position: absolute; border-radius: 40% 39px 40px 23px; left: 221px; rotate: 21deg; top: 84px; width: 128px; height: 380px; z-index: 3; }
+ #hnds {position:absolute;mix-blend-mode:soft-light;opacity:0;user-select:none;pointer-events:none;} #handset:hover ~ #hnds {opacity:0.12}
+@keyframes recieverdown{0%{rotate:-0.1deg;margin-top:3px}}
+</style> <body> <div id="header-container"></div> 
+<div id="alone" style="display: none;"> <span id="shakespan">there's&#160;nobody&#160;here</span> <style> .letter { display: inline-block; position: relative; transition: all ease 32ms; user-select: none; } </style>
+    <script> var shakespan = document.getElementById("shakespan"); var text = shakespan.textContent.trim();  var newText = ''; function updatemargins() { for (var i = 0; i < text.length; i++) {  var leftr = (Math.random() * 0.8 - 0.3) + 'px'; var rightr = (Math.random() * 0.3 - 0.3) + 'px'; var topr = (Math.random() * 1.3 - 0.1) + 'px'; var rotr = (Math.random() * 12.3 - 7.1) + 'deg';
+    var lspan = document.getElementById("letter" + i); lspan.style.marginLeft = leftr; lspan.style.marginRight = rightr; lspan.style.top = topr; lspan.style.rotate = rotr; } } for (var i = 0; i < text.length; i++) {  newText += '<span id="letter' + i + '" class="letter">' + text.charAt(i) + '</span>';  } shakespan.innerHTML = newText; setInterval(updatemargins, 128); </script> 
+</div>
+<div id="frame"> <img src="phone_13.webp" draggable="false" hidden loading="eager"> <audio src="pick_up.ogg" id="up"></audio> <audio src="put_down.ogg" id="down"></audio>
+<div id="phone"> <div id="handset" class="clickable"></div> <img src="phone_14.png" id="hnds" draggable="false">
+    <div class="btn clickable" style="left: 341px; top: 303px;" id="01"><img src="phone_01.png" draggable="false"></div>
+    <div class="btn clickable" style="left: 383px; top: 314px;" id="02"><img src="phone_02.png" draggable="false"></div>
+    <div class="btn clickable" style="left: 423.5px; top: 326px;" id="03"><img src="phone_03.png" draggable="false"></div>
+    <div class="btn clickable" style="left: 332px; top: 329px;" id="04"><img src="phone_04.png" draggable="false"></div>
+    <div class="btn clickable" style="left: 373px; top: 341px;" id="05"><img src="phone_05.png" draggable="false"></div>
+    <div class="btn clickable" style="left: 414px; top: 352px;" id="06"><img src="phone_06.png" draggable="false"></div>
+    <div class="btn clickable" style="left: 322px; top: 357px;" id="07"><img src="phone_07.png" draggable="false"></div>
+    <div class="btn clickable" style="left: 363px; top: 369px;" id="08"><img src="phone_08.png" draggable="false"></div>
+    <div class="btn clickable" style="left: 404px; top: 381px;" id="09"><img src="phone_09.png" draggable="false"></div>
+    <div class="btn clickable" style="left: 311px; top: 385px;" id="10"><img src="phone_10.png" draggable="false"></div>
+    <div class="btn clickable" style="left: 352px; top: 398px;" id="11"><img src="phone_11.png" draggable="false"></div>
+    <div class="btn clickable" style="left: 394.5px; top: 410px;" id="12"><img src="phone_12.png" draggable="false"></div>
+</div>
+</div> </body> 
+<!-- Mirrored from smlwiki.com/newhouse/phone by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 04 May 2025 13:46:53 GMT -->
+</html>
+<script> const amb2 = new Audio('https://nez.fyi/sml-assets/rumble.ogg'); amb2.play(); amb2.volume = 0.0; amb2.loop = true;
+const amb = new Audio('https://nez.fyi/sml-assets/phoneroom2.ogg'); setTimeout(()=>{amb.play()},256); amb.loop = true;
+function beep(e){let t=new Audio(`${e}.ogg`);function n(){t.pause(),document.removeEventListener("mouseup",n),document.removeEventListener("mouseout",n)}t.play(),document.addEventListener("mouseup",n),document.addEventListener("mouseout",n)}
+document.getElementById("handset").addEventListener("click",function(){document.getElementById("phone").style.backgroundImage="url('phone_13.webp')",document.getElementById("phone").style.pointerEvents="none",document.getElementById("hnds").style.display="none",document.getElementById("up").play(),setTimeout(()=>{document.getElementById("alone").style.display="block",amb2.volume=.2,amb.volume=.1},512),setTimeout(()=>{document.getElementById("down").play()},2360),setTimeout(()=>{document.getElementById("phone").style.animation="recieverdown 128ms steps(3)",document.getElementById("phone").style.backgroundImage="url('phone_00.webp')",document.getElementById("alone").style.display="none",amb2.volume=0,amb.volume=1,document.getElementById("phone").style.pointerEvents="auto",document.getElementById("hnds").style.display="block",document.getElementById("down").play(),localStorage.setItem('phonen',true);setTimeout(()=>{document.getElementById("phone").style.animation=""},128)},2560)});
+for (let i = 1; i <= 12; i++) { const id = i.toString().padStart(2, '0'); const button = document.getElementById(id); button.addEventListener('mousedown', () => beep(id)); button.addEventListener('touchstart', () => beep(id)); } </script>
+<script> fetch('../global/header.html') .then(response => response.text()) .then(html => { document.getElementById('header-container').innerHTML = html;  ; return fetch('../global/global.js').then(response => response.text()).then(script => eval(script)).catch(error => console.error('error fetching global js:', error));}) .catch(error => console.error('error fetching header:', error)); </script>

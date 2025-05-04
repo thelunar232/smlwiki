@@ -1,0 +1,54 @@
+<!DOCTYPE html> 
+<!-- Mirrored from smlwiki.com/characters/freddy-fidget by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 04 May 2025 13:45:39 GMT -->
+<head> <link rel="icon" type="image/x-icon" href="../favicon.ico"> <meta charset="UTF-8"> <meta name="robots" content="noindex"> <title>Freddy Fidget - smlwiki.com</title> <meta name="description" content="…"/> </head> 
+<html lang="en"><link rel="stylesheet" type="text/css" href="character_pages.css"> <style> #authorsign { position: absolute; bottom: 3px; right: 3px; font-size: 13px; font-weight: bold; font-style: italic; color: #756a; font-family: Consolas; text-align: right; } #authorsign:hover { color: #765; } </style>
+
+<body> <div id="header-container"></div>
+  <div id="container"><div id="text-content">
+    <h1 style="padding-bottom: 42px; border-bottom: solid 1px #500;">Freddy Fidget</h1>
+        <div class="text-entry">
+                <h2>General Info</h2>
+                <p>Freddy Fidget is the inventor of the Fidget Spinner in the SML Universe. He made a commercial advertising the Fidget Spinner and was killed off 2 days later by an unknown force. Most likely the Day of Imbalance.</p>
+            </div>
+        <div class="text-entry">
+                <h2>Quotes</h2>
+                <p>
+<i>"These famous Fred fidget spinners only go for $14.44!"</i>
+<br>
+<i>"I may be blind in both eyes, but I can still see a deal."</i>
+<br>
+<i>"I'm famous Freddy Fidget, founder of the famous fidget spinner!"</i>
+                </p>
+            </div>
+        <div class="text-entry">
+                <h2>Trivia</h2>
+                <p>
+&bull; The fidget spinners he advertised only costed $14.44.
+<br>
+&bull; Freddy is blind in both eyes.
+<br>
+&bull; Freddy bears a resemblance to a certain <a href="../cast/pablo.html"><b>winner</b></a>.
+<br>
+                </p>
+            </div>
+    <span id="authorsign">Page submitted by 'bungface'</span>
+                        </div>
+<div id="image-frame"> <div class="textbox">Appearance:</div> <div class="appearance-buttons"> 
+    <button onclick="changeAppearance('current')">Current</button>
+    <button onclick="changeAppearance('former')">Former</button> </div>
+<div id="image-container"> <img src="user-submissions/freddy.jpg"> </div>
+<div class="infobox">Once a fidget, always a spinner.</div> </div> </div>
+</body> 
+<!-- Mirrored from smlwiki.com/characters/freddy-fidget by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 04 May 2025 13:45:39 GMT -->
+</html>
+<script> changeAppearance('current');
+function changeAppearance(appearance) {
+  const buttons = document.querySelectorAll('.appearance-buttons button');
+        buttons.forEach(btn => btn.classList.remove('pressed'));
+  const image = document.querySelector('#image-container img');
+       if (appearance === 'current') { image.src = 'user-submissions/freddy.jpg';
+} else if (appearance === 'former') { image.src = 'user-submissions/fidgetprevious.png'; }
+  const pressedButton = Array.from(buttons).find(button => button.innerText.toLowerCase().includes(appearance)); pressedButton.classList.add('pressed'); }
+const amb = new Audio('https://nez.fyi/sml-assets/fidgetmusic.ogg'); amb.loop = true; setTimeout(()=>{amb.play()},256);
+</script>
+<script>fetch("../global/header.html").then(e=>e.text()).then(html=>(document.getElementById("header-container").innerHTML=html,fetch("../global/global.js").then(e=>e.text()).then(script=>eval(script)).catch(e=>console.error("error fetching global js:",e)))).catch(e=>console.error("error fetching header:",e));</script>

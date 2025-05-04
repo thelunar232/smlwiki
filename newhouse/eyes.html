@@ -1,0 +1,18 @@
+<!DOCTYPE html> 
+<!-- Mirrored from smlwiki.com/newhouse/eyes by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 04 May 2025 13:46:28 GMT -->
+<meta name="robots" content="noindex"> <meta name="theme-color" content="#000000"> <style> body { margin: 0; background: #000; } * { pointer-events: none !important; cursor: url('../1px.png'), auto !important;  } #eyes { width: 256px; filter: brightness(0) contrast(1.6); } #eyes * { position: absolute; left:50%; top:50%; transform: translate(-50%, -50%); width: 100%; height: fit-content; }
+@keyframes appear { 0% { filter: brightness(0.3) contrast(1.6); } 100% { filter: brightness(0.9) contrast(1.3); } } .appear { animation: appear 128ms ease forwards; }
+</style><div style="position: absolute; left:0; top:0; width: 100vw; height: 100vh; cursor: url('../1px.png'), auto !important; z-index: 7;"></div>
+<div id="eyes" style="position: absolute; left:50%; top:calc(50% - 32px); transform: translate(-50%, -50%);"> <img src="marveys/eyes01.jpg"> <img src="marveys/eyes02.jpg" style="mix-blend-mode: lighten;"> <img src="marveys/eyes03.png"> <img src="marveys/eyes04.jpg" style="mix-blend-mode: darken;"> <video src="marveys/eyeswideopen.webm" id="lids"></video> </div>
+<script> document.addEventListener("DOMContentLoaded", function () { var charframes = document.querySelectorAll('img');
+charframes.forEach(function (charframe) { var randomX = Math.floor(Math.random() * 8) - 2; var randomY = Math.floor(Math.random() * 4) - 2;
+charframe.style.position = 'absolute'; charframe.style.marginLeft = randomX + 'px'; charframe.style.marginTop = randomY + 'px';
+ var animationStepsX = Math.floor(Math.random() * 768) + 0.5; var animationStepsY = Math.floor(Math.random() * 512) + 0.5; var duration = Math.floor(Math.random() * 5) + 6;
+ var keyframesX = []; var keyframesY = [];
+  for (var i = 0; i <= animationStepsX; i++) { var step = i / animationStepsX * 256; var distance = (i % 2 === 0) ? 2 : -1; keyframesX.push(`${step}% { margin-left: ${distance}px; }`); } for (var i = 0; i <= animationStepsY; i++) { var step = i / animationStepsY * 100; var distance = (i % 2 === 0) ? 1 : -1; keyframesY.push(`${step}% { margin-top: ${distance}px; }`); }
+ var animationNameX = `bounceX-${Math.random().toString(36).substring(7)}`; var animationNameY = `bounceY-${Math.random().toString(36).substring(7)}`;
+ var cssAnimationX = `@keyframes ${animationNameX} { ${keyframesX.join(' ')} }`; var cssAnimationY = `@keyframes ${animationNameY} { ${keyframesY.join(' ')} }`;
+ var styleSheet = document.styleSheets[0]; styleSheet.insertRule(cssAnimationX, styleSheet.cssRules.length); styleSheet.insertRule(cssAnimationY, styleSheet.cssRules.length);
+charframe.style.animation = `${animationNameX} ${duration}s linear infinite, ${animationNameY} ${duration}s linear infinite`; }); });
+let c = document.getElementById('lids'); c.onloadeddata = function() { blink(); document.getElementById('eyes').classList.add('appear'); setTimeout(function() { window.location.href = 'hall.html'; }, 1536); };
+function blink() { const amb = new Audio('https://nez.fyi/sml-assets/marvineyes2.ogg'); const amb2 = new Audio('https://nez.fyi/sml-assets/badpage02.ogg'); setTimeout(function() { setTimeout(()=>{amb.play()},256); }, 128); c.play(); setTimeout(function() { c.style.display = 'none'; }, 256); } </script>

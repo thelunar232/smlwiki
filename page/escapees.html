@@ -1,0 +1,44 @@
+<!DOCTYPE html> 
+<!-- Mirrored from smlwiki.com/page/escapees by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 04 May 2025 13:45:46 GMT -->
+<head> <link rel="icon" type="image/x-icon" href="../favicon.ico"> <meta charset="UTF-8"> <meta name="robots" content="noindex"> <title>Escapees - smlwiki.com</title> <meta name="description" content="…"/> </head> <html lang="en"> <meta charset="UTF-8"><link rel="stylesheet" type="text/css" href="../characters/character_pages.css"><noscript><link rel="stylesheet" href="../characters/character_pages.css"></noscript>
+<style> body {background: url('../cast/charred.gif') center;} #container { background: linear-gradient(0deg, rgba(69,0,0) 0%, rgba(57,0,0,0.6) 69%), url('../global/grosstexture.jpg') right/cover; } a { color: #d00; } </style>
+<body> <div id="header-container"></div>
+  <div id="container"><div id="text-content">
+    <h1 style="padding-bottom: 42px; border-bottom: solid 1px #500;">Escapees</h1>
+        <div class="text-entry">
+                <h2>Zdude</h2>
+                <p>Zdude, <a href="https://youtube.com/@zdudezeke">@zdudezeke on YouTube</a>, is the online alias of Zeke. Zeke had been far-removed from the republic and was safe from the grasp of <a href="aetheon.html" style="color: blue">Aetheon</a> during the <a href="../event/day-of-imbalance.html" style="color: blue">Day Of Imbalance</a>, the monumentous turn of events that most believe resulted in <a href="../event/day-of-imbalance.html" style="color: blue">the rescinding of Earth</a>. Zeke currently resides in the second reality, eternally blessed by his good heart and positive spirit.</p>
+            </div>
+        <div class="text-entry">
+                <h2>damie_an</h2>
+                <p>damie_an, <a href="https://twitter.com/damie_an">@damie_an on Twitter</a>, is a prominent third-party documenter in the events of the SML Wiki meta.</p>
+            </div>
+        <div class="text-entry">
+                <h2>Charmx</h2>
+                <p>cool <a href="../characters/guy.html">Guy</a></p>
+            </div>
+        <div class="text-entry">
+                <p>Sources:</p>
+                <span style="font-size: 17px;"><a href="https://www.youtube.com/watch?v=_2g96YPWWu4">https://www.youtube.com/watch?v=_2g96YPWWu4</a> </span><br><span style="font-size: 17px;"><a href="https://twitter.com/damie_an/status/1759271427612512421">https://twitter.com/damie_an/status/1759271427612512421</a></span><br><span style="font-size: 17px;"><a href="https://www.youtube.com/watch?v=8_RoYx5hMMo">https://www.youtube.com/watch?v=8_RoYx5hMMo</a></span>
+            </div>
+                        </div>
+<div id="image-frame"> <div class="textbox">Escapees:</div> <div class="appearance-buttons">
+    <button onclick="changeAppearance('zdude')">Zdude</button>
+    <button onclick="changeAppearance('damie_an')">damie_an</button> 
+    <button onclick="changeAppearance('charmx')">Charmx</button> </div>
+<div id="image-container"> <img src="../characters/zeke.jpg"> </div>
+<div class="infobox">big ups</div> </div>
+  </div>
+<script> changeAppearance('zdude');
+function changeAppearance(appearance) {
+  const buttons = document.querySelectorAll('.appearance-buttons button');
+        buttons.forEach(btn => btn.classList.remove('pressed'));
+  const image = document.querySelector('#image-container img');
+       if (appearance === 'zdude') { image.src = '../characters/zeke.jpg';
+} else if (appearance === 'damie_an') { image.src = 'damie_an.jpg';
+} else if (appearance === 'charmx') { image.src = 'gchormssx.jpg'; }
+  const pressedButton = Array.from(buttons).find(button => button.innerText.toLowerCase().includes(appearance)); pressedButton.classList.add('pressed'); }
+</script> </body> 
+<!-- Mirrored from smlwiki.com/page/escapees by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 04 May 2025 13:45:47 GMT -->
+</html>
+<script> fetch('../global/header.html') .then(response => response.text()) .then(html => { document.getElementById('header-container').innerHTML = html;  ; return fetch('../global/global.js').then(response => response.text()).then(script => eval(script)).catch(error => console.error('error fetching global js:', error));}) .catch(error => console.error('error fetching header:', error)); </script>

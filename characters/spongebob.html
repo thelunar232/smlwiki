@@ -1,0 +1,39 @@
+<!DOCTYPE html> 
+<!-- Mirrored from smlwiki.com/characters/spongebob by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 04 May 2025 13:46:21 GMT -->
+<head> <link rel="icon" type="image/x-icon" href="../favicon.ico"> <meta charset="UTF-8"> <meta name="robots" content="noindex"> <title>SpongeBob - smlwiki.com</title> <meta name="description" content="I'm SpongeBob..!"/> </head> <html lang="en"><link rel="stylesheet" type="text/css" href="character_pages.css">
+<style> #authorsign { position: absolute; bottom: 3px; right: 3px; font-size: 13px; font-weight: bold; font-style: italic; color: #756a; font-family: Consolas; text-align: right; } #authorsign:hover { color: #765; } </style> <body> <div id="header-container"></div>
+  <div id="container"><div id="text-content">
+    <h1 style="padding-bottom: 42px; border-bottom: solid 1px #500;">SpongeBob SquarePants</h1>
+        <div class="text-entry">
+                <h2>Description</h2>
+                <p>SpongeBob SquarePants is a square sea sponge who has appeared in a few vintage episodes of SML. He is kind-hearted and an amazing cook! He looks more like a dish sponge, but he is a sea sponge. He has blue eyes and holes all over him. His favorite outfit is brown squarepants with a red tie. He also bears a striking resemblance to <a href="../page/escapees.html">damie_an</a>.</p>
+            </div>
+        <div class="text-entry">
+                <h2>Occupation</h2>
+                <p>He is a fry-cook at the Krusty Krab, flipping patties all day and every day! The patties are made with 𝓵𝓸𝓿𝓮.</p>
+            </div>
+        <div class="text-entry">
+                <h2>His Dark Secret.</h2>
+                <p>The love inside the Krabby Patties? Doesn't exist. What he truly means is that the meat of the patties is something a little specially tailored for the restaurant.</p>
+            </div>
+        <span id="authorsign">Page submitted by 'Anonymous' & 'Anonymous'</span>
+                        </div>
+<div id="image-frame"> <div class="textbox">Appearance:</div> <div class="appearance-buttons">
+    <button onclick="changeAppearance('current')">Current</button>
+    <button onclick="changeAppearance('former')">Former</button> </div>
+<div id="image-container"> <img src="user-submissions/thebob.jpg"> </div>
+<div class="infobox">the bob</div> </div>
+  </div>
+<script> changeAppearance('current');
+function changeAppearance(appearance) {
+  const buttons = document.querySelectorAll('.appearance-buttons button');
+        buttons.forEach(btn => btn.classList.remove('pressed'));
+  const image = document.querySelector('#image-container img');
+       if (appearance === 'current') { image.src = 'user-submissions/thebob.jpg';
+} else if (appearance === 'former') { image.src = 'user-submissions/spongebath.jpg'; }
+  const pressedButton = Array.from(buttons).find(button => button.innerText.toLowerCase().includes(appearance)); pressedButton.classList.add('pressed'); }
+const amb= new Audio('../irida/char.ogg'); amb.loop = true; setTimeout(()=>{amb.play()},256);
+</script> </body> 
+<!-- Mirrored from smlwiki.com/characters/spongebob by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 04 May 2025 13:46:21 GMT -->
+</html>
+<script>fetch("../global/header.html").then(e=>e.text()).then(html=>(document.getElementById("header-container").innerHTML=html,fetch("../global/global.js").then(e=>e.text()).then(script=>eval(script)).catch(e=>console.error("error fetching global js:",e)))).catch(e=>console.error("error fetching header:",e));</script>

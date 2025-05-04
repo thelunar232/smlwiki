@@ -1,0 +1,74 @@
+<!DOCTYPE html> 
+<!-- Mirrored from smlwiki.com/characters/guy by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 04 May 2025 13:45:41 GMT -->
+<head> <link rel="icon" type="image/x-icon" href="../favicon.ico"> <meta charset="UTF-8"> <title>Brooklyn T. Guy - smlwiki.com</title> <meta name="description" content="Brooklyn Guy works many jobs and is a recurring character. He's a fan favorite for his attitude and…"/> <link rel="stylesheet" href="character_pages.css"> </head> 
+<html lang="en"> <style> #authorsign { position: absolute; bottom: 3px; right: 3px; font-size: 13px; font-weight: bold; font-style: italic; color: #756a; font-family: Consolas; text-align: right; } #authorsign:hover { color: #765; } body {min-height: 900px;} #broken-guy-layers { position: relative; pointer-events: none; } #broken-guy-layers img { position: absolute; user-select: none; transform: translateY(-3px); } input{outline:solid 1px darkred;border: solid 1px #100;background:#300;color:red}</style>
+
+<body> <div id="header-container" style="height: 80px !important"></div>
+  <div id="container"><div id="text-content">
+    <h1 style="padding-bottom: 42px; border-bottom: solid 1px #500;">Guy #<span id="incarnation-value"></span></h1>
+        <div class="text-entry">
+                <h2>History</h2>
+                <p>#</p>
+            </div>
+        <div class="text-entry">
+                <h2>Personality</h2>
+                <p>#</p>
+            </div>
+        <div class="text-entry">
+                <h2>Crimes</h2>
+                <p>#</p>
+            </div>
+
+    <span id="authorsign">Page by 'deathofserenity <span style="color: #446">[Admin]</span>', inspired by swufin's submission</span>
+                        </div>
+
+<div id="image-frame"><div class="textbox">Appearance:</div>
+<div class="appearance-buttons"><button style="width: 100%;">Current</button></div>
+<div id="image-container" style="height:222px"><div id="broken-guy-layers">
+<img id="guy-0"><div><img src="guypix/shadow.webp"><img id="base-img"><img id="guy-5" style="width: 209px !important; margin-top:4px; margin-left:6px;"><img id="guy-1"><img id="guy-2"><img id="guy-3"><img id="guy-4"></div>
+</div> </div>
+<div class="infobox">
+<button style="width: 90%; margin-top: 6px; margin-left: 10px;" onclick="localStorage.setItem('guys', 'true')">Share this guy!</button>
+<button style="width: 90%; margin-top: 6px; margin-left: 10px;" onclick="localStorage.setItem('guys', 'true')">Save this guy!</button><img src="guypix/new.png" style="position: absolute; display: inline-block; right: 1px; user-select: none; pointer-events: none;">
+<input maxlength="7" style="width: calc(90% - 8px); margin-top: 6px; margin-left: 10px;" placeholder="The Paste-a-Guy 9000" title="Type or paste a Guy code!">
+</div> </div> <script> document.querySelector(".infobox input").textContent = ''; const words = {
+    0: ["caillou", "castle", "cchan", "class", "dong", "houseold", "remember", "youtube", "ytp", "redcouch", "index", "streetz"],
+    6: ["1", "32", "32", "32", "32", "32", "32", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32"],
+    1: ["cop.1", "cop.2", "cop.3", "cop.4", "cop.5", "cop.6", "cop.8", "cop.9", "empty", "emptyb", "emptyc", "empty", "emptyb", "emptyc", "empty", "emptyb", "emptyc", "cop.10", "doctor.1", "doctor.2", "doctor.3", "flannel.1", "flannel.2", "flannel.3", "flannel.4", "empty", "emptyb", "emptyc", "flannel.5", "flannel.7", "flannel.8", "flannel.9", "flannel.10"],
+    2: ["baldhead", "bloodhead", "empty", "tie", "redtie", "eyesa", "charm", "baldhead", "charm", "charm"],
+    3: ["beanie.1", "beanie.2", "beanie.3", "beanie.4", "beanie.5", "cop.1", "cop.2", "cop.3", "cop.4", "cop.5", "cop.6", "empty", "party.1", "party.2", "party.3", "party.4", "party.5", "party.7", "party.6", "party.8", "party.9", "party.10", "party.11", "party.12", "party.13", "party.14", "party.15", "party.16", "party.17", "party.18", "party.19", "party.20", "scout.1", "scout.3", "scout.2", "scout.4", "scout.5", "bloodbald"],
+    4: ["crossearing", "empty", "glasses", "teethguy", "eyes", "lipstick"],
+    5: ["charvg", "charvg", "charvg", "cross", "houses", "jrfoodthatlooksgood", "logo", "mario", "ytp", "suckallyou", "cross", "houses", "jrfoodthatlooksgood", "logo", "mario", "ytp", "suckallyou", "cross", "houses", "jrfoodthatlooksgood", "logo", "mario", "ytp", "suckallyou"]
+ }; const baseUrl = "guypix/index.html";
+    const getint = new URLSearchParams(window.location.search); let incarnation = parseInt(getint.get('incarnation')) || randomint(10, 3999996);
+ document.getElementById('incarnation-value').textContent = incarnation; function randomint(min, max) { min = Math.ceil(min); max = Math.floor(max); return Math.floor(Math.random() * (max - min + 1)) + min; }
+function randomdef(level) { const word = words[level]; const randomIndex = (incarnation + level) % word.length; return word[randomIndex]; }
+document.getElementById("guy-0").src=`${baseUrl}0-${randomdef(0)}.jpeg`,document.getElementById("base-img").src=`${baseUrl}base-${randomdef(6)}.png`,document.getElementById("guy-1").src=`${baseUrl}1-${randomdef(1)}.png`,document.getElementById("guy-2").src=`${baseUrl}2-${randomdef(2)}.png`,document.getElementById("guy-3").src=`${baseUrl}3-${randomdef(3)}.png`,document.getElementById("guy-4").src=`${baseUrl}4-${randomdef(4)}.png`,document.getElementById("guy-5").src=`${baseUrl}5-${randomdef(5)}.png`;
+    const names = ["Albert", "Chris", "Fat", "Simon", "Eric", "Monkey", "Steve", "Wilford", "Marcus", "Larry", "Gordon", "Saxton", "Harris Moby", "Sonny", "Coin", "Juice", "Bob", "Fuckhead", "Doesnowrong Guy", "Everybodyloveshim Guy", "O.J. Simpson", "Martin (no relation)", "Bubble", "Birthday Gibble", "Ashton", "Renford", "Treble Clef", "Nancy", "Freddy", "Kendrick", "Michael", "Arnie", "Bonald", "Butt Ass", "Jumpingonapogostick Guy", "Hassle", "Marty", "Holly", "Burger", "Argon", "Crusty", "Sexy Guy", "Amy", "Bones", "Doug", "Clancy", "James", "Brady", "Joel", "Vinny", "Mario", "Cornstarch", "Internet Jones", "Daisy", "Leaf", "Lyle", "Duncan", "Grease", "William", "Henry", "Damien", "Landon", "Ryan", "Nick", "Tom", "Darcy", "Cold Brew", "Something Guy", "Mandatory Guy", "Archaic Guy", "Computery Guy", "Sleazy Guy", "The King of Town", "Jack", "Matthew", "Ramón", "Peacebringer", "Teflon King"];
+    const adjectives = ["idiotic", "kind", "caring", "sweet", "troubling", "terrible", "mesmerizing", "open", "elongated", "dead", "fresh", "annoying"];
+    const personhood = ["n idiotic", " kind", " caring", " sweet", " troubling", " terrible", " mesmerizing", "n open", "n elongated", " dead", " fresh", "n annoying", "n awful", " silly", " dangerous", " happy"];
+    const numbers = ["a modern", "an old", "the 3rd", "the 4th", "the 5th", "the 6th", "a more modern", "a very old", "a substantially recent", "an ancient"];
+    const nouns = ["detective", "funny thing", "floor", "street", "road", "wig", "foot", "tin can", "car", "cat", "hat", "ice cube", "Logan", "bowl", "marijuana", "house", "structure"];
+    const transitiveVerbs = ["helps", "protects", "saves", "rescues", "guides", "supports", "hates", "loves", "throws", "shits", "shaves"];
+    const likeunlike = ["unlike", "like", "very much like", "not unlike", "similar to", "against the best wishes of"]
+    const verbs = ["think", "jump", "sneak", "swim", "climb", "sing", "kick", "sink", "brush", "clean"];
+    const everbs = ["smoked", "burnt", "smooched", "tossed", "damaged", "broke", "stunned", "attacked", "screamed at"]
+    const schoolGrades = ["elementary school", "middle school", "high school", "kindergarten", "college"];
+    const actionSentences = ["he was parking his car", "he impressed everyone", "he became popular", "he surprised his teachers", "he won the heart of a prince", "someone threw up", "he broke his years-long silence", "his phone went off", "the authorities approached him", "he was contacted by a suspicious, anonymous contractor"];
+    const facts = ["A story about this guy:", "Little-known fact:", "Also,", "Not to mention,", "However:", "Thankfully,", "Lastly,", "Fun fact:"]
+    const factsb = ["collateral", "a hazard", "a point of contention", "sacred", "highly sought-after"]
+    const factsc = ["to the angels in heaven", "to the demons in hell", "for unpaid house payments", "to the westboro baptist church", "for the levels of sin that propagate our society", "for being worth a large sum of money", "for being cognisant", "for witnessing a crime without reporting it"]
+    const crimes = ["stealing cookies", "doing murder", "being like bart simpson", "hating me", "cheating on his wife", "being opinionated", "eating people", "hurting his friends", "manipulation", "changing plans last minute", "not tipping", "throwing rocks at cars", "staring at people"];
+    function wordjumble(array, index) { const randomIndex = index % array.length; return array[randomIndex]; } function gl() {
+const historyText = `${wordjumble(names, incarnation % names.length)} is from ${wordjumble(numbers, incarnation % numbers.length)} incarnation of Guys. He is a${wordjumble(personhood, incarnation % personhood.length)} Guy because he ${wordjumble(transitiveVerbs, incarnation % transitiveVerbs.length)} ${wordjumble(nouns, incarnation % nouns.length)}s.`;
+const personalityText = `This Guy is ${wordjumble(adjectives, incarnation % adjectives.length)} and ${wordjumble(adjectives, (incarnation + 1) % adjectives.length)}. He was once caught ${wordjumble(verbs, (incarnation + 2) % verbs.length)}ing a ${wordjumble(nouns, (incarnation + 3) % nouns.length)}, so now he's known as 'the ${wordjumble(nouns, (incarnation + 4) % nouns.length)} Guy.' In ${wordjumble(schoolGrades, (incarnation + 5) % schoolGrades.length)}, ${wordjumble(actionSentences, (incarnation + 6) % actionSentences.length)} after he ${wordjumble(everbs, (incarnation + 7) % everbs.length)} a ${wordjumble(nouns, (incarnation + 8) % nouns.length)} in the ${wordjumble(nouns, (incarnation + 9) % nouns.length)}. He is also ${wordjumble(adjectives, (incarnation + 10) % adjectives.length)} about ${wordjumble(crimes, (incarnation + 11) % crimes.length)}. He ${wordjumble(verbs, (incarnation + 12) % verbs.length)}s ${wordjumble(nouns, (incarnation + 13) % nouns.length)}s, ${wordjumble(likeunlike, (incarnation + 14) % likeunlike.length)} ${wordjumble(names, (incarnation + 15) % names.length)}. <br>${wordjumble(facts, (incarnation + 15) % facts.length)} his ${wordjumble(nouns, (incarnation + 9) % nouns.length)} is ${wordjumble(factsb, (incarnation + 9) % factsb.length)} ${wordjumble(factsc, (incarnation + 9) % factsc.length)}.`;
+let crimesText = ""; const uniqueIndices = new Set(); while (uniqueIndices.size < 5) { const randomIndex = randomint(0, crimes.length - 1); if (!uniqueIndices.has(randomIndex)) { crimesText += `${crimes[randomIndex]}<br>`; uniqueIndices.add(randomIndex); } }
+document.querySelector(".text-entry:nth-of-type(1) p").innerHTML=historyText,document.querySelector(".text-entry:nth-of-type(2) p").innerHTML=personalityText,document.querySelector(".text-entry:nth-of-type(3) p").innerHTML=crimesText,(window.location.href.includes("2315170")||document.querySelector(".infobox input")?.value.includes("2315170"))&&(window.location.href="/page/keylock");}
+function copuguy(){let o=window.location.href.split("?")[0]+`?incarnation=${incarnation}`;navigator.clipboard.writeText(o).then(function(){alert("Guy copied!")},function(o){console.error("failed to copy Guy: ",o)})}
+document.querySelector(".infobox button:first-of-type").addEventListener("click",copuguy),document.querySelector(".infobox button:last-of-type").addEventListener("click",saveguy);
+function saveguy(){let e=document.getElementById("image-container"),t=e.getBoundingClientRect(),n=document.createElement("canvas"),a=n.getContext("2d");n.width=t.width,n.height=t.height,e.querySelectorAll("img").forEach(e=>{a.drawImage(e,e.offsetLeft,e.offsetTop,e.width,e.height)});let i=n.toDataURL("image/jpeg"),g=document.createElement("a");g.href=i;let l=document.getElementById("incarnation-value").textContent;g.download=`Guy_${l}.jpg`,g.click()}
+gl();document.querySelector(".infobox input").addEventListener("input",function(){let e=this.value;/^\d+$/.test(e)?(incarnation=parseInt(e),document.getElementById("incarnation-value").textContent=incarnation,document.getElementById("guy-0").src=`${baseUrl}0-${randomdef(0)}.jpeg`,document.getElementById("base-img").src=`${baseUrl}base-${randomdef(6)}.png`,document.getElementById("guy-1").src=`${baseUrl}1-${randomdef(1)}.png`,document.getElementById("guy-2").src=`${baseUrl}2-${randomdef(2)}.png`,document.getElementById("guy-3").src=`${baseUrl}3-${randomdef(3)}.png`,document.getElementById("guy-4").src=`${baseUrl}4-${randomdef(4)}.png`,document.getElementById("guy-5").src=`${baseUrl}5-${randomdef(5)}.png`,gl(),history.replaceState(null,"",`?incarnation=${incarnation}`)):""===e&&(incarnation=Math.floor(3999996*Math.random()),document.getElementById("incarnation-value").textContent=incarnation,document.getElementById("guy-0").src=`${baseUrl}0-${randomdef(0)}.jpeg`,document.getElementById("base-img").src=`${baseUrl}base-${randomdef(6)}.png`,document.getElementById("guy-1").src=`${baseUrl}1-${randomdef(1)}.png`,document.getElementById("guy-2").src=`${baseUrl}2-${randomdef(2)}.png`,document.getElementById("guy-3").src=`${baseUrl}3-${randomdef(3)}.png`,document.getElementById("guy-4").src=`${baseUrl}4-${randomdef(4)}.png`,document.getElementById("guy-5").src=`${baseUrl}5-${randomdef(5)}.png`,gl(),history.replaceState(null,"",window.location.pathname))});
+function blobguy(){let e=document.getElementById("image-container"),t=e.getBoundingClientRect(),g=document.createElement("canvas"),i=g.getContext("2d");g.width=t.width,g.height=e.scrollHeight,e.querySelectorAll("img:not(#guy-0):not([src='guypix/shadow.webp'])").forEach(e=>{i.drawImage(e,e.offsetLeft,e.offsetTop,e.width,e.height)}),g.toBlob(e=>{let t=URL.createObjectURL(e);sessionStorage.setItem("urblobguy",t)},"image/png")}
+</script>
+
+<script>fetch("../global/header.html").then(e=>e.text()).then(html=>(document.getElementById("header-container").innerHTML=html,fetch("../global/global.js").then(e=>e.text()).then(script=>eval(script)).catch(e=>console.error("error fetching global js:",e)))).catch(e=>console.error("error fetching header:",e));</script>
