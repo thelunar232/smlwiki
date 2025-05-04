@@ -1,0 +1,2 @@
+const jpc = `<a href="mail/piano" style="text-decoration: none;"><div class="mail"><img src="mail_piano.png"><div class="mailinfo"><span>Piano Toy</span><span style="font-size: 13px;">Sender: Jerry of Jerry's CrapShack LLC<br>Recipient: You!</span></div></div></a>`;
+ document.getElementById("mail33").insertAdjacentHTML('afterbegin', jpc); cmail();

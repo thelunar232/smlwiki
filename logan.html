@@ -1,0 +1,22 @@
+<!DOCTYPE html> 
+<!-- Mirrored from smlwiki.com/logan by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 04 May 2025 13:46:23 GMT -->
+<meta name="robots" content="noindex"> <html lang="en"> <title>Thirtyacre</title> 
+<style> body { background-image: url(logan2.gif); image-rendering: pixelated; font-family: Arial; }
+#eyes { width: 190px; height: 35px; position: absolute; top: calc(43% - 16px); left: calc(50% - 6px); transform: translate(-50%, -50%); border: solid 1px red; z-index: -1; background: #fff; filter: blur(3px) contrast(1.4); }
+#container { width: 500px; height: 620px; position: absolute; top: 47%; left: 50%; transform: translate(-50%, -50%); pointer-events: none; }
+#container img { width: 100%; height: 100%; z-index: 3; pointer-events: none; }
+.eye { width: 15px; height: 15px; margin-top: 7px; border-radius: 50%; background-color: #000; position: absolute; }
+#left-eye { left: 25px; top: 11px; } #right-eye { right: 25px; }
+#image {
+    background-size: 1686px;
+   scale: 1.45; transform-origin: top left;
+}
+</style>
+<div id="container"> <span id="eyes"> <div class="eye" id="left-eye"></div> <div class="eye" id="right-eye"></div>
+</span> <div id="image"></div> </div>
+<img id="image2" src="loganhead.gif" width="900" style="right: 50px; bottom: -222px; display: none; position: absolute;" title="a p d h i r">
+<script> function access() { return document.referrer.includes(window.location.origin); } if (!access()) { window.location.href = "menu/index.html"; } 
+const eyes=document.querySelectorAll(".eye");let cursorEntered=!1;window.addEventListener("mousemove",e=>{eyes.forEach(n=>{var t=n.getBoundingClientRect(),l=(e.pageX-t.left)/40+"px",r=(e.pageY-t.top)/50+"px";n.style.transform="translate3d("+l+","+r+", 0px)"})});var audio=new Audio("https://nez.fyi/sml-assets/logandeathscreen.ogg");function enterFullscreen(){let e=document.documentElement;e.requestFullscreen?e.requestFullscreen():e.mozRequestFullScreen?e.mozRequestFullScreen():e.webkitRequestFullscreen?e.webkitRequestFullscreen():e.msRequestFullscreen&&e.msRequestFullscreen(),amb.pause(),amb.loop=!1,sceneB(),audio.play()}document.addEventListener("DOMContentLoaded",function(){["#eyes","#image"].forEach(function(e){var n=document.querySelector(e),t=`bounceX-${Math.random().toString(36).substring(7)}`,l=`bounceY-${Math.random().toString(36).substring(7)}`,r=`@keyframes ${t} { 0% { margin-left: 0; } 25% { margin-left: 5px; } 50% { margin-left: -10px; } 100% { margin-left: 0; } }`,s=`@keyframes ${l} { 0% { margin-top: 0; } 35% { margin-top: 20px; } 100% { margin-top: 0; } }`,o=document.styleSheets[0];o.insertRule(r,o.cssRules.length),o.insertRule(s,o.cssRules.length),n.style.animation=`${t} 6s linear infinite, ${l} 6s linear infinite`})}),document.addEventListener("mousemove",function(e){let n=e.clientX,t=e.clientY,l=window.innerWidth,r=window.innerHeight;n<=130&&t<=130?enterFullscreen():n>=l-120&&t<=120?enterFullscreen():(n<=10||n>=l||t<=10||t>=r)&&enterFullscreen()});let cursorEnteredTime;function sceneB(){setTimeout(function(){document.querySelectorAll("*").forEach(function(e){e.style.filter="saturate(43) brightness(0.1)"})},100),document.body.style.backgroundImage="url('logan2-3.png')",document.body.style.overflow="hidden",setTimeout(function(){document.querySelectorAll("*").forEach(function(e){e.style.filter="none"})},200);var e=document.getElementById("container");e&&(e.style.display="none");var n=document.getElementById("image2");n&&(n.style.display="block"),setTimeout(()=>{window.location.href="/"},1900)}document.addEventListener("mouseover",function(){cursorEnteredTime=Date.now()});const amb=new Audio("https://nez.fyi/sml-assets/logancreepybg.ogg");setTimeout(()=>{amb.play()},256),amb.loop=!0;
+document.addEventListener("DOMContentLoaded",function(){let $=["0","1","2"],e=0;function t($){var e;image.style.backgroundImage="url(loganhead_sheet.webp)",image.style.backgroundPosition=`-${337*$}px 0`,image.style.width="337px",image.style.height="438px"}!function n(){let o=new Date().getTime();var l,a=900,g=3e3;o%3e3<1e3?(t("4"),setTimeout(()=>{t($[e]),e=(e+1)%$.length,n()},200)):o%15e3<4e3?(t("3"),setTimeout(()=>{t($[e]),e=(e+1)%$.length,n()},Math.floor(Math.random()*(3e3-a+1))+a)):(t($[e=(e+1)%$.length]),setTimeout(n,(l=e,0===l?700:100)))}()}); </script> <script src="global/global.js"></script> 
+<!-- Mirrored from smlwiki.com/logan by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 04 May 2025 13:46:23 GMT -->
+</html>
